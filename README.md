@@ -3,7 +3,7 @@
 <img src="https://camo.githubusercontent.com/08ecbe7b67d65cc7c6990787e2836b27b4296f2d/68747470733a2f2f7261772e6769746875622e636f6d2f666c65787472792f54656c6572696b2d41636164656d792f6d61737465722f50726f6772616d6d696e6725323077697468253230432532332f436f6465732f4f746865722f54656c6572696b2e706e67"/>
 </a>
 
-<h1 align="center">CSharp OOP Teamwork Assignment June 2016</h1>
+<h1 align="center">CSharp OOP Team "Hsu Hao"</h1>
 
 ###Team Members
 | Name              | Academy Username      	|
@@ -17,7 +17,9 @@
 |Виктория Атанасова      |__wertyn__       	|	
 |Ния Керанова     |__Nayata__       	|	
 
-## Project Description
+##CSharp OOP Teamwork Assignment June 2016
+
+### Project Description
 
 Design and implement an object-oriented application by choice. Here are some suggestions:
 - A game:
@@ -43,7 +45,7 @@ Design and implement an object-oriented application by choice. Here are some sug
   - Events scheduling system.
 
 
-## General Requirements
+### General Requirements
 Please define and implement the following object-oriented assets in your project:
 
 - At least **5 interfaces** (with one or more implementations)
@@ -59,12 +61,12 @@ Please define and implement the following object-oriented assets in your project
 
 You might read about design patterns in Wikipedia, Sourcemaking, DoFactory and others.
 
-## Additional Requirements
+### Additional Requirements
 - Follow the **best practices for OO design**: use data encapsulation, use exception handling properly, use delegates and events like it is recommended in MSDN, use inheritance, abstraction and polymorphism properly, follow the principles of strong cohesion and loose coupling.
 - Obligatory use Git to keep your source code and for team collaboration (you might use https://github.com/). **TFS or SVN are not allowed. Use Git.**
 - Provide a class diagram (to visualize all types).
 
-## Optional Requirements
+### Optional Requirements
 If you have a chance, time and a suitable situation, you might add some of the following to your project:
 
 - Static members (fields, properties, constructor, etc.)
@@ -74,10 +76,10 @@ If you have a chance, time and a suitable situation, you might add some of the f
 - Namespaces (if your classes are too many) 
 - User interface (UI) – console, graphical, web or mobile
 
-## Non-Required Work
+### Non-Required Work
 - Completely finished project is not obligatory required. It will not be a big problem if your project is not completely finished or is not working greatly. This team work project is for educational purpose. Its main purpose it to experience object-oriented modeling and OOP in a real-world project and to get some experience in team working and team collaboration with Git.
 
-## Deliverables
+### Deliverables
 Put the following in a ZIP archive and submit it in http://telerikacademy.com/ course page (each team member submits the same file):
 - The complete source code.
 - Brief documentation of your project in **.md**(markdown). It should provide the following information (in brief):
@@ -89,7 +91,7 @@ Put the following in a ZIP archive and submit it in http://telerikacademy.com/ c
 - Obligatory upload your projects in the Showcase system (http://best.telerikacademy.com/)
 - Optionally provide a PowerPoint presentation designed for the project defense.
 
-## Public Project Defense
+### Public Project Defense
 Each team will have to deliver a public defense of its work in front of the other students and trainers. You will have only 10 minutes for the following:
 - Demonstrate the application (very shortly).
 - Show the class diagram (just a glance)
@@ -99,5 +101,5 @@ Each team will have to deliver a public defense of its work in front of the othe
 
 Please be strict in timing! Be **well prepared for presenting** maximum of your work for minimum time. Bring your own laptop. Test it preliminary with the multimedia projector. Open the project assets beforehand to save time. **You have 10 minutes**, no more. It is not necessary for all team members to participate in the project defense.
 
-## Give Feedback about Your Teammates
+### Give Feedback about Your Teammates
 You will be invited to provide feedback about all your teammates, their attitude to this project, their technical skills, their team working skills, their contribution to the project, etc. The feedback is important part of the project evaluation so **take it seriously and be honest**.
