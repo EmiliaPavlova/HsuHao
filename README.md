@@ -18,7 +18,7 @@
 |Виктория Атанасова      |__wertyn__       	|	
 |Ния Керанова     |__Nayata__       	|	
 
-##:computer:CSharp OOP Teamwork Assignment June 2016
+##:computer: CSharp OOP Teamwork Assignment June 2016
 
 ###Project Description
 
