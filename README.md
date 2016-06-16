@@ -3,6 +3,21 @@
 <img src="https://camo.githubusercontent.com/08ecbe7b67d65cc7c6990787e2836b27b4296f2d/68747470733a2f2f7261772e6769746875622e636f6d2f666c65787472792f54656c6572696b2d41636164656d792f6d61737465722f50726f6772616d6d696e6725323077697468253230432532332f436f6465732f4f746865722f54656c6572696b2e706e67"/>
 </a>
 
+<h1 align="center">CSharp OOP Teamwork Assignment June 2016</h1>
+
+###Team Members
+| Name              | Academy Username      	|
+|-------------------|-------------------|
+|Илиян Купенов |Ilian_Iliev_2	        |
+|Емилия Павлова |Emily |
+|Александър Димитров |Betastate    	|	
+|Георги Карабойчев    |prot3ct            	|	
+|Стоян Пешев    |ogonommo  	|	
+|Димитър Кацарски      |DKatsarski    	 	|	
+|Виктория Атанасова      |wertyn       	|	
+|Ния Керанова     |Nayata       	|	
+
+
 # CSharp OOP Teamwork Assignment June 2016
 
 ## Project Description
