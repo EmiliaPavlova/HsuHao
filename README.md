@@ -8,17 +8,14 @@
 ###Team Members
 | Name              | Academy Username      	|
 |-------------------|-------------------|
-|Илиян Купенов |Ilian_Iliev_2	        |
-|Емилия Павлова |Emily |
-|Александър Димитров |Betastate    	|	
-|Георги Карабойчев    |prot3ct            	|	
-|Стоян Пешев    |ogonommo  	|	
-|Димитър Кацарски      |DKatsarski    	 	|	
-|Виктория Атанасова      |wertyn       	|	
-|Ния Керанова     |Nayata       	|	
-
-
-# CSharp OOP Teamwork Assignment June 2016
+|Илиян Купенов |__Ilian_Iliev_2__	        |
+|Емилия Павлова |__Emily__ |
+|Александър Димитров |__Betastate__    	|	
+|Георги Карабойчев    |__prot3ct__            	|	
+|Стоян Пешев    |__ogonommo__  	|	
+|Димитър Кацарски      |__DKatsarski__    	 	|	
+|Виктория Атанасова      |__wertyn__       	|	
+|Ния Керанова     |__Nayata__       	|	
 
 ## Project Description
 
