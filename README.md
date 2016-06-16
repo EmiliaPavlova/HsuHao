@@ -8,6 +8,7 @@
 ###:mortar_board:Team Members
 | Name              | Academy Username      	|
 |-------------------|-------------------|
+|                   | :white_check_mark:|
 |Илиян Купенов |__Ilian_Iliev_2__	        |
 |Емилия Павлова |__Emily__ |
 |Александър Димитров |__Betastate__    	|	
