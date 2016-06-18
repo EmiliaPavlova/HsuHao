@@ -27,3 +27,32 @@ C:\Users\Bobeto\Desktop\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\SpriteShe
 C:\Users\Bobeto\Desktop\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\Images\TestBG.jpg
 C:\Users\Bobeto\Desktop\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\Images\BG2.png
 C:\Users\Bobeto\Desktop\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\Images\morkov.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\obj\x86\Debug\RedDragon.exe
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\obj\x86\Debug\RedDragon.pdb
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\Images\BG2.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\Images\morkov.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\Images\TestBG.jpg
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\Content\SpriteSheets\RunningSpritesheet.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\RedDragon.exe
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\RedDragon.pdb
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\HsuHao\RedDragon\obj\x86\Debug\RedDragon.csprojResolveAssemblyReference.cache

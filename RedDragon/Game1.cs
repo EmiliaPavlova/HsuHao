@@ -104,7 +104,7 @@ namespace RedDragon
 
 
 
-            spriteBatch.Draw(rabitRun, rabitPos, new Rectangle(((int)currentFrame) * 44, 0, 44, 43), Color.White, 0f, new Vector2(22, 22), 1f, flipped, 1f);
+            spriteBatch.Draw(rabitRun, rabitPos, new Rectangle(((int)currentFrame) * 44, 0, 44, 43), Color.White, 0f, new Vector2(22, 22), 1.5f, flipped, 1f);
 
             spriteBatch.End();
 
