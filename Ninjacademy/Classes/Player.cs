@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace MyTest
+namespace Ninjacademy
 {
     public class Player
+        : GameObject, IAnimatable, ICollidable, IMovable, IRenderable
     {
         public Vector2 position;
         public Vector2 velocity;

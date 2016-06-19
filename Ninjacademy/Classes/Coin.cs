@@ -1,9 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MyTest
+//PROBABLY WONT BE USING
+
+namespace Ninjacademy
 {
     public class Coin
+        : GameObject, IAnimatable, ICollectable, IRenderable
     {
         private static float coinCurrFrame;
 
@@ -22,7 +25,7 @@ namespace MyTest
             }
         }
 
-        public int GetCurrCoinFrame
+        public int GetFrame
         {
             get
             {

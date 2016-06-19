@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace MyTest
+namespace Ninjacademy
 {
     public class Game1 : Game
     {
@@ -215,7 +215,7 @@ namespace MyTest
             spriteBatch.Draw(player2Textures[player2Action, player2.GetFrame], player2.position * graphics.PreferredBackBufferWidth, null,
                 Color.White, 0f, new Vector2(293, 353.5f), (player2.size * graphics.PreferredBackBufferWidth) / player2Textures[1, 0].Width, player2Flip, 1f);
 
-            spriteBatch.Draw(coinTexture[coin.GetCurrCoinFrame], new Vector2(0.5f, 0.4f) * graphics.PreferredBackBufferWidth, null, 
+            spriteBatch.Draw(coinTexture[coin.GetFrame], new Vector2(0.5f, 0.4f) * graphics.PreferredBackBufferWidth, null, 
                 Color.White, 0, Vector2.Zero, (0.05f * graphics.PreferredBackBufferWidth) / coinTexture[0].Width, SpriteEffects.None, 0);
 
             spriteBatch.End();
