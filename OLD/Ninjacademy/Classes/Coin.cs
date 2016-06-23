@@ -1,0 +1,36 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+//PROBABLY WONT BE USING
+
+namespace Ninjacademy
+{
+    public class Coin
+        : GameObject, IAnimatable, ICollectable, IRenderable
+    {
+        private static float coinCurrFrame;
+
+        public Coin()
+        {
+            coinCurrFrame = 0;
+        }
+
+        public void Animate()
+        {
+            coinCurrFrame += 0.15f;
+
+            if (coinCurrFrame >= 6.0f)
+            {
+                coinCurrFrame = 0;
+            }
+        }
+
+        public int GetFrame
+        {
+            get
+            {
+                return (int)coinCurrFrame;
+            }
+        }
+    }
+}
