@@ -10,8 +10,6 @@ namespace Ninjacademy
         public const float MAX_SPEED = 0.0050f;
         const float GRAVITY = 0.00010f;
 
-        //SoundEffect bgEffect;
-
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
