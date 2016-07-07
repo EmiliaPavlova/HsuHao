@@ -43,7 +43,7 @@
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Rock.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Interfaces\IDrawable.cs" />
+    <Compile Include="Interfaces\IAnimatable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
