@@ -1,4 +1,4 @@
-﻿namespace RabitFury.Classes
+﻿namespace RabitFury.Classes.Menu
 {
     using System.Collections.Generic;
 
