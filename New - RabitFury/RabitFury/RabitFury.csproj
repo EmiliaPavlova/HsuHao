@@ -38,6 +38,8 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\GameObject.cs" />
+    <Compile Include="Classes\Obstacles.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Rock.cs" />
     <Compile Include="Game1.cs" />

@@ -54,3 +54,61 @@ C:\Users\Bobeto\Desktop\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct
 C:\Users\Bobeto\Desktop\RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache
 C:\Users\Bobeto\Desktop\RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TheBG.png
 C:\Users\Bobeto\Desktop\RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\Brick.png
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\obj\x86\Debug\RabitFury.exe
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\obj\x86\Debug\RabitFury.pdb
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\Brick.png
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TestPoint.png
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TestRect.png
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TheBG.png
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\RabitFury.exe
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\RabitFury.pdb
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\prot3ct\Desktop\RabbirtFury Team\RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.exe
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.pdb
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\Brick.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TestPoint.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TestRect.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\TheBG.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\RabitFury.exe
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\RabitFury.pdb
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache

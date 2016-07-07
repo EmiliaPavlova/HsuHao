@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RabitFury.Classes
+﻿namespace RabitFury.Classes
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
     using Microsoft.Xna.Framework;
+
+
     public class Player
     {
         private const float playerX = 0.5f; //Probably not subject to changing//

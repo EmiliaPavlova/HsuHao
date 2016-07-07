@@ -18,7 +18,7 @@ namespace RabitFury
         Vector2 bgPos = new Vector2(0.5f, 0.28125f);
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
 
-        Rock theBrick;
+        //Rock theBrick; 
 
 
         Player thePlayer;
@@ -50,7 +50,7 @@ namespace RabitFury
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
 
             //Load with textures//
-            theBrick = new Rock(new Vector2(0.7f, 0.45f), new Vector2(0.08f, 0.08f), Color.White, brickTexture);
+            //theBrick = new Rock(new Vector2(0.7f, 0.45f), new Vector2(0.08f, 0.08f), Color.White, brickTexture);
         }
         
         protected override void UnloadContent()
@@ -84,8 +84,8 @@ namespace RabitFury
                 currentMove.Y = -0.001f;
             }
 
-            //Vector2 finalPos = AllTheBrics.TryMovement(currentMove, thePlayer.CollisionPoints);
-
+            
+            /* // Platform Collision //
             if (theBrick.IfCollide(thePlayer.CollisionPoints[0]) || theBrick.IfCollide(thePlayer.CollisionPoints[1]))
             {
                 if (currentMove.X > 0) currentMove.X = 0;
@@ -102,12 +102,12 @@ namespace RabitFury
             {
                 if (currentMove.Y < 0) currentMove.Y = 0;
             }
-
+            */
 
 
             bgPos -= currentMove;
             bgPos2 -= currentMove;
-            theBrick.Scroll(-currentMove);
+            //theBrick.Scroll(-currentMove);
             
 
             base.Update(gameTime);
@@ -125,8 +125,10 @@ namespace RabitFury
             spriteBatch.Draw(testBackground, bgPos * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X*Resolution.X)/testBackground.Width, SpriteEffects.None, 1f);
             spriteBatch.Draw(testBackground, bgPos2 * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X * Resolution.X) / testBackground.Width, SpriteEffects.None, 1f);
 
-            //Kamani :
-            spriteBatch.Draw(theBrick.TheTexture, theBrick.Position * Resolution.X, null, theBrick.TheColor, 0f, new Vector2(theBrick.TheTexture.Width / 2, theBrick.TheTexture.Height / 2), (theBrick.Size.X * Resolution.X) / theBrick.TheTexture.Width, SpriteEffects.None, 1f);
+
+            //The platform is being drawn :
+            //spriteBatch.Draw(theBrick.TheTexture, theBrick.Position * Resolution.X, null, theBrick.TheColor, 0f, new Vector2(theBrick.TheTexture.Width / 2, theBrick.TheTexture.Height / 2), (theBrick.Size.X * Resolution.X) / theBrick.TheTexture.Width, SpriteEffects.None, 1f);
+            // TO DO
 
 
             //Player being drawn//
