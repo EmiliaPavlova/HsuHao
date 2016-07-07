@@ -2,13 +2,13 @@
 {
     using System;
 
-    using Interfaces;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+    using RabitFury.Interfaces;
 
-    public abstract class GameObject : IAnimatable
+    public class MenuObject : IAnimatable
     {
-        public GameObject(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
+        public MenuObject(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
         {
             this.Position = setPos;
             this.Size = setSize;
@@ -23,10 +23,5 @@
         public Color TheColor { get; set; }
 
         public Texture2D TheTexture { get; set; }
-
-        public void Scroll(Vector2 alter)
-        {
-            Position += alter;
-        }
     }
 }

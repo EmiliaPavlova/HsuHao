@@ -1,10 +1,11 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
-namespace RabitFury
+﻿namespace RabitFury
 {
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
+
     using Classes;
+
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
@@ -20,7 +21,6 @@ namespace RabitFury
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
         Vector2 velocity = new Vector2(0, 0);
         AllPlatforms allPlatforms;
-
 
         Player thePlayer;
 
@@ -57,9 +57,7 @@ namespace RabitFury
             allPlatforms = new AllPlatforms(terrain);
         }
         
-        protected override void UnloadContent()
-        {
-        }
+        protected override void UnloadContent() { }
 
         protected override void Update(GameTime gameTime)
         {
@@ -123,7 +121,6 @@ namespace RabitFury
             spriteBatch.Begin();
 
             //Background :
-
 
             spriteBatch.Draw(testBackground, bgPos * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X*Resolution.X)/testBackground.Width, SpriteEffects.None, 1f);
             spriteBatch.Draw(testBackground, bgPos2 * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X * Resolution.X) / testBackground.Width, SpriteEffects.None, 1f);

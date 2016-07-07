@@ -40,6 +40,8 @@
   <ItemGroup>
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\MapGenerator.cs" />
+    <Compile Include="Classes\MenuItems.cs" />
+    <Compile Include="Classes\MenuObject.cs" />
     <Compile Include="Classes\Obstacle.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Platform.cs" />
