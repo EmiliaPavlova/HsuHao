@@ -47,6 +47,7 @@
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\AllPlatforms.cs" />
     <Compile Include="Enums\ButtonType.cs" />
+    <Compile Include="Enums\PlatformType.cs" />
     <Compile Include="Enums\GameStateType.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\IAnimatable.cs" />
