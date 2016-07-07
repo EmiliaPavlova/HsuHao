@@ -9,7 +9,7 @@ namespace RabitFury
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        public static Vector2 Resolution = new Vector2(1094,614);
+        public static Vector2 Resolution = new Vector2(960,544);
         Texture2D defaultTexture;
         Texture2D testPointTexture;
         Texture2D testBackground;
