@@ -14,11 +14,12 @@ namespace RabitFury
         Texture2D testPointTexture;
         Texture2D testBackground;
         Texture2D brickTexture;
+        Texture2D[] terrain;
         Vector2 bgSize = new Vector2(1, 0.5625f);
         Vector2 bgPos = new Vector2(0.5f, 0.28125f);
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
-
-        //Rock theBrick; 
+        Vector2 velocity = new Vector2(0, 0);
+        AllPlatforms allPlatforms;
 
 
         Player thePlayer;
@@ -29,28 +30,31 @@ namespace RabitFury
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = (int)Resolution.X;
             graphics.PreferredBackBufferHeight = (int)Resolution.Y;
-            //graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
             graphics.ApplyChanges();
         }
         
         protected override void Initialize()
         {
-            thePlayer = new Player(new Vector2(0.06f,0.1f)); //Player set with size {X,Y} // aspect ratio is 3:5 //
-
-            //bool[] canMove = yourClass.Collide(thePlayer.CollisionPoints);
+            thePlayer = new Player(new Vector2(0.045f,0.075f)); //Player set with size {X,Y} // aspect ratio is 3:5 //
             base.Initialize();
         }
         
         protected override void LoadContent()
         {
+            //Load with textures//
             spriteBatch = new SpriteBatch(GraphicsDevice);
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
             testBackground = Content.Load<Texture2D>("Textures/TheBG");
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
-
-            //Load with textures//
-            //theBrick = new Rock(new Vector2(0.7f, 0.45f), new Vector2(0.08f, 0.08f), Color.White, brickTexture);
+            terrain = new Texture2D[18];
+            for (int i = 0; i < terrain.Length; i++)
+            {
+                terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
+            }
+            //Initialize//
+            allPlatforms = new AllPlatforms(terrain);
         }
         
         protected override void UnloadContent()
@@ -64,50 +68,49 @@ namespace RabitFury
 
             KeyboardState keyState = Keyboard.GetState();
 
-            Vector2 currentMove = new Vector2(0, 0);
+            velocity.X = 0;
+            velocity.Y += 0.00005f;
 
             if (keyState.IsKeyDown(Keys.Right))
             {
-                currentMove.X = 0.001f;
+                velocity.X = 0.003f;
             }
             else if (keyState.IsKeyDown(Keys.Left))
             {
-                currentMove.X = -0.001f;
+                velocity.X = -0.003f;
             }
-
             if (keyState.IsKeyDown(Keys.Down))
             {
-                currentMove.Y = 0.001f;
+                velocity.Y = 0.003f;
             }
-            else if (keyState.IsKeyDown(Keys.Up))
+            else if (keyState.IsKeyDown(Keys.Up) && (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
             {
-                currentMove.Y = -0.001f;
+                velocity.Y = -0.005f;
             }
 
+            // Platform Collision //
+            if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
+            {
+                if (velocity.X > 0) velocity.X = 0;
+            }
+            else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
+            {
+                if (velocity.X < 0) velocity.X = 0;
+            }
+            if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
+            {
+                if (velocity.Y > 0) velocity.Y = 0;
+            }
+            else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
+            {
+                if (velocity.Y < 0) velocity.Y = 0;
+            }
             
-            /* // Platform Collision //
-            if (theBrick.IfCollide(thePlayer.CollisionPoints[0]) || theBrick.IfCollide(thePlayer.CollisionPoints[1]))
-            {
-                if (currentMove.X > 0) currentMove.X = 0;
-            }
-            else if (theBrick.IfCollide(thePlayer.CollisionPoints[4]) || theBrick.IfCollide(thePlayer.CollisionPoints[5]))
-            {
-                if (currentMove.X < 0) currentMove.X = 0;
-            }
-            if (theBrick.IfCollide(thePlayer.CollisionPoints[2]) || theBrick.IfCollide(thePlayer.CollisionPoints[3]))
-            {
-                if (currentMove.Y > 0) currentMove.Y = 0;
-            }
-            else if (theBrick.IfCollide(thePlayer.CollisionPoints[6]) || theBrick.IfCollide(thePlayer.CollisionPoints[7]))
-            {
-                if (currentMove.Y < 0) currentMove.Y = 0;
-            }
-            */
 
 
-            bgPos -= currentMove;
-            bgPos2 -= currentMove;
-            //theBrick.Scroll(-currentMove);
+            bgPos -= velocity;
+            bgPos2 -= velocity;
+            allPlatforms.Scroll(-velocity);
             
 
             base.Update(gameTime);
@@ -119,7 +122,7 @@ namespace RabitFury
 
             spriteBatch.Begin();
 
-            //Backgrounda :
+            //Background :
 
 
             spriteBatch.Draw(testBackground, bgPos * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X*Resolution.X)/testBackground.Width, SpriteEffects.None, 1f);
@@ -128,7 +131,10 @@ namespace RabitFury
 
             //The platform is being drawn :
             //spriteBatch.Draw(theBrick.TheTexture, theBrick.Position * Resolution.X, null, theBrick.TheColor, 0f, new Vector2(theBrick.TheTexture.Width / 2, theBrick.TheTexture.Height / 2), (theBrick.Size.X * Resolution.X) / theBrick.TheTexture.Width, SpriteEffects.None, 1f);
-            // TO DO
+            foreach (Platform p in allPlatforms.rocks)
+            {
+                spriteBatch.Draw(p.TheTexture, p.Position * Resolution.X, null, p.TheColor, 0f, new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), (p.Size.X * Resolution.X) / p.TheTexture.Width, SpriteEffects.None, 1f);
+            }
 
 
             //Player being drawn//

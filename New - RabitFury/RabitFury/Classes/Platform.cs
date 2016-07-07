@@ -6,9 +6,9 @@
     using Microsoft.Xna.Framework.Graphics;
 
 
-    public class Rock : Obstacle, IAnimatable
+    public class Platform : Obstacle, IAnimatable
     {
-        public Rock(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture) 
+        public Platform(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture) 
             : base(setPos, setSize, setColor, setTexture)
         {
         }
