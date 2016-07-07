@@ -1,4 +1,4 @@
-﻿namespace RabitFury.Classes
+﻿namespace RabitFury.Classes.GameObject
 {
     using System;
 

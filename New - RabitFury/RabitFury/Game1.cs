@@ -5,7 +5,7 @@
     using Microsoft.Xna.Framework.Input;
 
     using Classes;
-
+    using Classes.GameObject;
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
@@ -118,11 +118,22 @@
         {
             GraphicsDevice.Clear(Color.Black);
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.FrontToBack);
 
             //Background :
 
-            spriteBatch.Draw(testBackground, bgPos * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X*Resolution.X)/testBackground.Width, SpriteEffects.None, 1f);
+            spriteBatch.Draw(
+                testBackground,
+                bgPos * Resolution.X,
+                null,
+                Color.White,
+                0f,
+                new Vector2(testBackground.Width / 2,
+                testBackground.Height / 2),
+                (bgSize.X*Resolution.X)/testBackground.Width,
+                SpriteEffects.None,
+                1f);
+
             spriteBatch.Draw(testBackground, bgPos2 * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X * Resolution.X) / testBackground.Width, SpriteEffects.None, 1f);
 
 
