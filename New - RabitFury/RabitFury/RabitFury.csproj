@@ -40,12 +40,14 @@
   <ItemGroup>
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\MapGenerator.cs" />
-    <Compile Include="Classes\MenuItems.cs" />
-    <Compile Include="Classes\MenuObject.cs" />
+    <Compile Include="Classes\Menu\MenuItems.cs" />
+    <Compile Include="Classes\Menu\MenuObject.cs" />
     <Compile Include="Classes\Obstacle.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Platform.cs" />
     <Compile Include="Classes\AllPlatforms.cs" />
+    <Compile Include="Enums\ButtonType.cs" />
+    <Compile Include="Enums\GameStateType.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\IAnimatable.cs" />
     <Compile Include="Program.cs" />
@@ -131,8 +133,9 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Constants\MenuConstants\" />
     <Folder Include="Content\Spritesheets\" />
-    <Folder Include="Enums\Extensions\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
