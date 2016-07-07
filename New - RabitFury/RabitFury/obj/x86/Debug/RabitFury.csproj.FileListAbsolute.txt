@@ -178,5 +178,6 @@ C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.exe
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.pdb
-C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\Lava2d.png
-C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\LavaSquare.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\19.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\UselessLava.png

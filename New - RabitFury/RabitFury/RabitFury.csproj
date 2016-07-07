@@ -118,10 +118,10 @@
     <Content Include="Content\Textures\Brick.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Textures\Lava2d.png">
+    <Content Include="Content\Textures\UselessLava.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Textures\LavaSquare.png">
+    <Content Include="Content\Textures\19.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Textures\TestPoint.png">

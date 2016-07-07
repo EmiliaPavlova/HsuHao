@@ -16,12 +16,10 @@
         Texture2D testBackground;
         Texture2D brickTexture;
         Texture2D[] terrain;
-        Texture2D lava;
         Vector2 bgSize = new Vector2(1, 0.5625f);
         Vector2 bgPos = new Vector2(0.5f, 0.28125f);
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
         Vector2 velocity = new Vector2(0, 0);
-        Vector2 lavaPosition = new Vector2(1.1f, 0.54f);
         float jumpPower = 0.011f;
         float gravity = 0.0002f;
         float maxVelocity = 0.004f;
@@ -53,8 +51,8 @@
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
             testBackground = Content.Load<Texture2D>("Textures/TheBG");
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
-            terrain = new Texture2D[18];
-            lava = Content.Load<Texture2D>("Textures/LavaSquare");
+            terrain = new Texture2D[19];
+            
             for (int i = 0; i < terrain.Length; i++)
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
@@ -109,7 +107,6 @@
 
                 bgPos -= velocity;
                 bgPos2 -= velocity;
-                lavaPosition -= velocity;
                 allPlatforms.Scroll(-velocity);
             }      
 
@@ -139,11 +136,8 @@
                 1f);
 
             spriteBatch.Draw(testBackground, bgPos2 * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X * Resolution.X) / testBackground.Width, SpriteEffects.None, 1f);
-            // Lava is being drawn:
-            spriteBatch.Draw(lava, lavaPosition * Resolution.X, null, Color.White, 0f, new Vector2(lava.Width / 2, lava.Height / 2), (0.11f * Resolution.X) / lava.Width, SpriteEffects.None, 1f);
 
-            //The platform is being drawn :
-            //spriteBatch.Draw(theBrick.TheTexture, theBrick.Position * Resolution.X, null, theBrick.TheColor, 0f, new Vector2(theBrick.TheTexture.Width / 2, theBrick.TheTexture.Height / 2), (theBrick.Size.X * Resolution.X) / theBrick.TheTexture.Width, SpriteEffects.None, 1f);
+            //The platform is being drawn :  
             foreach (Platform p in allPlatforms.rocks)
             {
                 if(p.TheTexture != null)
@@ -152,11 +146,9 @@
                 }
             }
 
-
             //Player being drawn//
             spriteBatch.Draw(defaultTexture, Player.Position*Resolution.X, null, new Color(105, 110, 255), 0f, new Vector2(defaultTexture.Width / 2, defaultTexture.Height / 2),(thePlayer.Size.X*Resolution.X)/defaultTexture.Width, SpriteEffects.None, 1f);
             
-
             //Players' collision points being drawn , they will always be 8//
             for (int i = 0;i < thePlayer.CollisionPoints.Length;i++)
             {

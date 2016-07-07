@@ -2,7 +2,7 @@
 {
     using Microsoft.Xna.Framework;
 
-    public class Player 
+    public class Player
     {
         private const float playerX = 0.5f; //Probably not subject to changing//
         private const float playerY = 0.375f; //Might need to change//

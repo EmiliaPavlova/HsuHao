@@ -20,7 +20,15 @@
                 {
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[2]));
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8]));
-                    i += 4;
+                    for (int current = i + 4;  i < current;  i++)
+                    {
+                        if (i == current - 1)
+                        {
+                            i++;
+                            break;
+                        }
+                        tempList.Add(new Platform(new Vector2((0.11f * i) + 0.11f, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[18]));
+                    }
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[0]));
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8]));
                 }
