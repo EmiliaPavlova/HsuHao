@@ -38,13 +38,13 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Classes\GameObject.cs" />
+    <Compile Include="Classes\GameObject\GameObject.cs" />
     <Compile Include="Classes\MapGenerator.cs" />
     <Compile Include="Classes\Menu\MenuItems.cs" />
     <Compile Include="Classes\Menu\MenuObject.cs" />
-    <Compile Include="Classes\Obstacle.cs" />
+    <Compile Include="Classes\GameObject\Obstacle.cs" />
     <Compile Include="Classes\Player.cs" />
-    <Compile Include="Classes\Platform.cs" />
+    <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\AllPlatforms.cs" />
     <Compile Include="Enums\ButtonType.cs" />
     <Compile Include="Enums\GameStateType.cs" />

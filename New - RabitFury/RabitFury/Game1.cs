@@ -118,7 +118,9 @@
         {
             GraphicsDevice.Clear(Color.Black);
 
-            spriteBatch.Begin(SpriteSortMode.FrontToBack);
+            //spriteBatch.Begin(SpriteSortMode.FrontToBack);
+            spriteBatch.Begin();
+
 
             //Background :
 
