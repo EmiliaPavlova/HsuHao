@@ -20,7 +20,6 @@ namespace RabitFury
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
         Vector2 velocity = new Vector2(0, 0);
         AllPlatforms allPlatforms;
-        //Platform theBrick; 
 
 
         Player thePlayer;
@@ -38,12 +37,12 @@ namespace RabitFury
         protected override void Initialize()
         {
             thePlayer = new Player(new Vector2(0.045f,0.075f)); //Player set with size {X,Y} // aspect ratio is 3:5 //
-            //bool[] canMove = yourClass.Collide(thePlayer.CollisionPoints);
             base.Initialize();
         }
         
         protected override void LoadContent()
         {
+            //Load with textures//
             spriteBatch = new SpriteBatch(GraphicsDevice);
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
@@ -54,10 +53,8 @@ namespace RabitFury
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
             }
-            //Load with textures//
             //Initialize//
             allPlatforms = new AllPlatforms(terrain);
-            //theBrick = new Platform(new Vector2(0.7f, 0.45f), new Vector2(0.08f, 0.08f), Color.White, brickTexture);
         }
         
         protected override void UnloadContent()
@@ -125,7 +122,7 @@ namespace RabitFury
 
             spriteBatch.Begin();
 
-            //Backgrounda :
+            //Background :
 
 
             spriteBatch.Draw(testBackground, bgPos * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X*Resolution.X)/testBackground.Width, SpriteEffects.None, 1f);
@@ -134,7 +131,6 @@ namespace RabitFury
 
             //The platform is being drawn :
             //spriteBatch.Draw(theBrick.TheTexture, theBrick.Position * Resolution.X, null, theBrick.TheColor, 0f, new Vector2(theBrick.TheTexture.Width / 2, theBrick.TheTexture.Height / 2), (theBrick.Size.X * Resolution.X) / theBrick.TheTexture.Width, SpriteEffects.None, 1f);
-            // TO DO
             foreach (Platform p in allPlatforms.rocks)
             {
                 spriteBatch.Draw(p.TheTexture, p.Position * Resolution.X, null, p.TheColor, 0f, new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), (p.Size.X * Resolution.X) / p.TheTexture.Width, SpriteEffects.None, 1f);

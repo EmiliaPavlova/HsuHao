@@ -11,7 +11,7 @@
     public class Player
     {
         private const float playerX = 0.5f; //Probably not subject to changing//
-        private const float playerY = 0.48f; //Might need to change//
+        private const float playerY = 0.42f; //Might need to change//
         private const float edgeShiftX = 0.4f; //Collsion snappynesss ,  0 to 0.5 , center to corner X //
         private const float edgeShiftY = 0.43f; //Collsion snappynesss ,  0 to 0.5 , center to corner Y //
 
