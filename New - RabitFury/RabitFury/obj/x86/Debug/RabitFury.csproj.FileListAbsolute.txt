@@ -181,3 +181,5 @@ C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\19.png
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\UselessLava.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\UselessLava.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\19.png

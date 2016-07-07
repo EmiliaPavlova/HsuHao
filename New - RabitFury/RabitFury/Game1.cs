@@ -6,6 +6,7 @@
 
     using Classes;
     using Classes.GameObject;
+
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
@@ -65,8 +66,11 @@
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+                Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
                 Exit();
+            }
             for (int i = 0; i < 2; i++)
             {
                 KeyboardState keyState = Keyboard.GetState();
@@ -82,25 +86,30 @@
                 {
                     velocity.X = -0.003f;
                 }
-                if (keyState.IsKeyDown(Keys.Up) && (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
+                if (keyState.IsKeyDown(Keys.Up) && (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || 
+                    allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
                 {
                     velocity.Y = -jumpPower;
                 }
 
                 // Platform Collision //
-                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
+                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) || 
+                    allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
                 {
                     if (velocity.X > 0) velocity.X = 0;
                 }
-                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
+                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) ||
+                    allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
                 {
                     if (velocity.X < 0) velocity.X = 0;
                 }
-                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
+                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || 
+                    allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
                 {
                     if (velocity.Y > 0) velocity.Y = 0;
                 }
-                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
+                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) || 
+                    allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
                 {
                     if (velocity.Y < 0) velocity.Y = 0;
                 }
@@ -121,8 +130,7 @@
             spriteBatch.Begin();
 
 
-            //Background :
-
+            //Background
             spriteBatch.Draw(
                 testBackground,
                 bgPos * Resolution.X,
@@ -135,28 +143,61 @@
                 SpriteEffects.None,
                 1f);
 
-            spriteBatch.Draw(testBackground, bgPos2 * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X * Resolution.X) / testBackground.Width, SpriteEffects.None, 1f);
+            spriteBatch.Draw(
+                testBackground, 
+                bgPos2 * Resolution.X, 
+                null,
+                Color.White,
+                0f, 
+                new Vector2(testBackground.Width / 2, testBackground.Height / 2), 
+                (bgSize.X * Resolution.X) / testBackground.Width, 
+                SpriteEffects.None, 1f);
 
-            //The platform is being drawn :  
+            //The platform is being drawn
             foreach (Platform p in allPlatforms.rocks)
             {
                 if(p.TheTexture != null)
                 {
-                    spriteBatch.Draw(p.TheTexture, p.Position * Resolution.X, null, p.TheColor, 0f, new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), (p.Size.X * Resolution.X) / p.TheTexture.Width, SpriteEffects.None, 1f);
+                    spriteBatch.Draw(
+                        p.TheTexture, 
+                        p.Position * Resolution.X,
+                        null, 
+                        p.TheColor,
+                        0f,
+                        new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), 
+                        (p.Size.X * Resolution.X) / p.TheTexture.Width, 
+                        SpriteEffects.None, 1f);
                 }
             }
 
-            //Player being drawn//
-            spriteBatch.Draw(defaultTexture, Player.Position*Resolution.X, null, new Color(105, 110, 255), 0f, new Vector2(defaultTexture.Width / 2, defaultTexture.Height / 2),(thePlayer.Size.X*Resolution.X)/defaultTexture.Width, SpriteEffects.None, 1f);
+            //Player being drawn
+            spriteBatch.Draw(
+                defaultTexture, 
+                Player.Position*Resolution.X, 
+                null,
+                new Color(105, 110, 255), 
+                0f,
+                new Vector2(defaultTexture.Width / 2, 
+                defaultTexture.Height / 2),
+                (thePlayer.Size.X*Resolution.X)/defaultTexture.Width, 
+                SpriteEffects.None, 1f);
             
-            //Players' collision points being drawn , they will always be 8//
+            //Players' collision points being drawn , they will always be 8
             for (int i = 0;i < thePlayer.CollisionPoints.Length;i++)
             {
-                spriteBatch.Draw(testPointTexture, thePlayer.CollisionPoints[i]*Resolution.X, null, Color.Red, 0f, new Vector2(2, 2), 1, SpriteEffects.None, 1f);
+                spriteBatch.Draw(
+                    testPointTexture, 
+                    thePlayer.CollisionPoints[i]*Resolution.X, 
+                    null, 
+                    Color.Red,
+                    0f, 
+                    new Vector2(2, 2), 
+                    1f, 
+                    SpriteEffects.None, 
+                    1f);
             }
 
             spriteBatch.End();
-
 
             base.Draw(gameTime);
         }
