@@ -30,7 +30,7 @@ namespace RabitFury
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = (int)Resolution.X;
             graphics.PreferredBackBufferHeight = (int)Resolution.Y;
-            // graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
             graphics.ApplyChanges();
         }
         
