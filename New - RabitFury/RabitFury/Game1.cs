@@ -11,19 +11,24 @@
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
         public static Vector2 Resolution = new Vector2(800,600);
+
         Texture2D defaultTexture;
         Texture2D testPointTexture;
         Texture2D testBackground;
         Texture2D brickTexture;
         Texture2D[] terrain;
+
         Vector2 bgSize = new Vector2(1, 0.5625f);
         Vector2 bgPos = new Vector2(0.5f, 0.28125f);
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
+
         Vector2 velocity = new Vector2(0, 0);
         float jumpPower = 0.011f;
         float gravity = 0.0002f;
         float maxVelocity = 0.004f;
+
         AllPlatforms allPlatforms;
 
         Player thePlayer;
