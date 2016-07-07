@@ -10,16 +10,21 @@
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        public static Vector2 Resolution = new Vector2(960,544);
+        public static Vector2 Resolution = new Vector2(800,600);
         Texture2D defaultTexture;
         Texture2D testPointTexture;
         Texture2D testBackground;
         Texture2D brickTexture;
         Texture2D[] terrain;
+        Texture2D lava;
         Vector2 bgSize = new Vector2(1, 0.5625f);
         Vector2 bgPos = new Vector2(0.5f, 0.28125f);
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
         Vector2 velocity = new Vector2(0, 0);
+        Vector2 lavaPosition = new Vector2(1.1f, 0.54f);
+        float jumpPower = 0.011f;
+        float gravity = 0.0002f;
+        float maxVelocity = 0.004f;
         AllPlatforms allPlatforms;
 
         Player thePlayer;
@@ -49,6 +54,7 @@
             testBackground = Content.Load<Texture2D>("Textures/TheBG");
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
             terrain = new Texture2D[18];
+            lava = Content.Load<Texture2D>("Textures/LavaSquare");
             for (int i = 0; i < terrain.Length; i++)
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
@@ -63,53 +69,49 @@
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            for (int i = 0; i < 2; i++)
+            {
+                KeyboardState keyState = Keyboard.GetState();
 
-            KeyboardState keyState = Keyboard.GetState();
+                velocity.X = 0;
+                if(velocity.Y < maxVelocity)velocity.Y += gravity;
 
-            velocity.X = 0;
-            velocity.Y += 0.00005f;
+                if (keyState.IsKeyDown(Keys.Right))
+                {
+                    velocity.X = 0.003f;
+                }
+                if (keyState.IsKeyDown(Keys.Left))
+                {
+                    velocity.X = -0.003f;
+                }
+                if (keyState.IsKeyDown(Keys.Up) && (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
+                {
+                    velocity.Y = -jumpPower;
+                }
 
-            if (keyState.IsKeyDown(Keys.Right))
-            {
-                velocity.X = 0.003f;
-            }
-            else if (keyState.IsKeyDown(Keys.Left))
-            {
-                velocity.X = -0.003f;
-            }
-            if (keyState.IsKeyDown(Keys.Down))
-            {
-                velocity.Y = 0.003f;
-            }
-            else if (keyState.IsKeyDown(Keys.Up) && (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
-            {
-                velocity.Y = -0.005f;
-            }
+                // Platform Collision //
+                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
+                {
+                    if (velocity.X > 0) velocity.X = 0;
+                }
+                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
+                {
+                    if (velocity.X < 0) velocity.X = 0;
+                }
+                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
+                {
+                    if (velocity.Y > 0) velocity.Y = 0;
+                }
+                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
+                {
+                    if (velocity.Y < 0) velocity.Y = 0;
+                }
 
-            // Platform Collision //
-            if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
-            {
-                if (velocity.X > 0) velocity.X = 0;
-            }
-            else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
-            {
-                if (velocity.X < 0) velocity.X = 0;
-            }
-            if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
-            {
-                if (velocity.Y > 0) velocity.Y = 0;
-            }
-            else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) || allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
-            {
-                if (velocity.Y < 0) velocity.Y = 0;
-            }
-            
-
-
-            bgPos -= velocity;
-            bgPos2 -= velocity;
-            allPlatforms.Scroll(-velocity);
-            
+                bgPos -= velocity;
+                bgPos2 -= velocity;
+                lavaPosition -= velocity;
+                allPlatforms.Scroll(-velocity);
+            }      
 
             base.Update(gameTime);
         }
@@ -137,13 +139,17 @@
                 1f);
 
             spriteBatch.Draw(testBackground, bgPos2 * Resolution.X, null, Color.White, 0f, new Vector2(testBackground.Width / 2, testBackground.Height / 2), (bgSize.X * Resolution.X) / testBackground.Width, SpriteEffects.None, 1f);
-
+            // Lava is being drawn:
+            spriteBatch.Draw(lava, lavaPosition * Resolution.X, null, Color.White, 0f, new Vector2(lava.Width / 2, lava.Height / 2), (0.11f * Resolution.X) / lava.Width, SpriteEffects.None, 1f);
 
             //The platform is being drawn :
             //spriteBatch.Draw(theBrick.TheTexture, theBrick.Position * Resolution.X, null, theBrick.TheColor, 0f, new Vector2(theBrick.TheTexture.Width / 2, theBrick.TheTexture.Height / 2), (theBrick.Size.X * Resolution.X) / theBrick.TheTexture.Width, SpriteEffects.None, 1f);
             foreach (Platform p in allPlatforms.rocks)
             {
-                spriteBatch.Draw(p.TheTexture, p.Position * Resolution.X, null, p.TheColor, 0f, new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), (p.Size.X * Resolution.X) / p.TheTexture.Width, SpriteEffects.None, 1f);
+                if(p.TheTexture != null)
+                {
+                    spriteBatch.Draw(p.TheTexture, p.Position * Resolution.X, null, p.TheColor, 0f, new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), (p.Size.X * Resolution.X) / p.TheTexture.Width, SpriteEffects.None, 1f);
+                }
             }
 
 
