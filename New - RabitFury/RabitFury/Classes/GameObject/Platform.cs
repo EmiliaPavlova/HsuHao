@@ -7,7 +7,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using Enums;
 
-    public class Platform : Obstacle, IAnimatable
+    public class Platform : Collidable, IAnimatable, ICollidable
     {
         public Platform(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture, PlatformType material) 
             : base(setPos, setSize, setColor, setTexture)
@@ -16,14 +16,5 @@
         }
 
         public PlatformType MaterialID { get; set; } 
-
-        public bool IfCollide(Vector2 thePoint)
-        {
-            if (thePoint.X >= Position.X - (Size.X/2) && thePoint.X <= Position.X + (Size.X / 2) && thePoint.Y >= Position.Y - (Size.Y / 2) && thePoint.Y <= Position.Y + (Size.Y / 2))
-            {
-                return true;
-            }
-            return false;
-        }
     }
 }
