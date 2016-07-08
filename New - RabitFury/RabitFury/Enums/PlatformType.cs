@@ -2,7 +2,8 @@
 {
     public enum PlatformType
     {
-        Dirt = 0,
-        Lava = 1
+        Dirt,
+        Lava,
+        Water
     }
 }

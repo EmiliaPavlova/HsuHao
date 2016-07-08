@@ -1,6 +1,6 @@
 ﻿namespace RabitFury.Enums
 {
-    public enum ButtonType
+    public enum ButtonStateType
     {
         Normal,
         Hovered,

@@ -6,11 +6,16 @@
 
     using Classes;
     using Classes.GameObject;
+    using Enums;
 
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        KeyboardState oldKeyState;
+
+        GameStateType currentGameState = GameStateType.InGame;
 
         public static Vector2 Resolution = new Vector2(800,600);
 
@@ -25,7 +30,7 @@
         Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
 
         Vector2 velocity = new Vector2(0, 0);
-        float jumpPower = 0.011f;
+        float jumpPower = 0.010f;
         float gravity = 0.0002f;
         float maxVelocity = 0.004f;
 
@@ -45,7 +50,8 @@
         
         protected override void Initialize()
         {
-            thePlayer = new Player(new Vector2(0.045f,0.075f)); //Player set with size {X,Y} // aspect ratio is 3:5 //
+            // Player set with size { X,Y} // aspect ratio is 3:5 //
+            thePlayer = new Player(new Vector2(0.045f,0.075f)); 
             base.Initialize();
         }
         
@@ -76,64 +82,104 @@
             {
                 Exit();
             }
-            for (int i = 0; i < 2; i++)
+
+            KeyboardState keyState = Keyboard.GetState();
+
+            if (keyState.IsKeyDown(Keys.P) && !oldKeyState.IsKeyDown(Keys.P))
             {
-                KeyboardState keyState = Keyboard.GetState();
+                if (currentGameState == GameStateType.InGame)
+                {
+                    currentGameState = GameStateType.Pause;
+                }
+                else if (currentGameState == GameStateType.Pause)
+                {
+                    currentGameState = GameStateType.InGame;
+                }
+            } 
 
-                velocity.X = 0;
-                if(velocity.Y < maxVelocity)velocity.Y += gravity;
+            if (currentGameState == GameStateType.MainMenu)
+            {
+                ////TODO
+            }
+            else if (currentGameState == GameStateType.Pause)
+            {
+                ////TODO
+            }
+            else if (currentGameState == GameStateType.InGame)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    velocity.X = 0;
+                    if (velocity.Y < maxVelocity)
+                    {
+                        velocity.Y += gravity;
+                    }
 
-                if (keyState.IsKeyDown(Keys.Right))
-                {
-                    velocity.X = 0.003f;
-                }
-                if (keyState.IsKeyDown(Keys.Left))
-                {
-                    velocity.X = -0.003f;
-                }
-                if (keyState.IsKeyDown(Keys.Up) && (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || 
-                    allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
-                {
-                    velocity.Y = -jumpPower;
-                }
+                    if (keyState.IsKeyDown(Keys.Right))
+                    {
+                        velocity.X = 0.003f;
+                    }
 
-                // Platform Collision //
-                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) || 
-                    allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
-                {
-                    if (velocity.X > 0) velocity.X = 0;
-                }
-                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) ||
-                    allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
-                {
-                    if (velocity.X < 0) velocity.X = 0;
-                }
-                if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) || 
-                    allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
-                {
-                    if (velocity.Y > 0) velocity.Y = 0;
-                }
-                else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) || 
-                    allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
-                {
-                    if (velocity.Y < 0) velocity.Y = 0;
-                }
+                    if (keyState.IsKeyDown(Keys.Left))
+                    {
+                        velocity.X = -0.003f;
+                    }
 
-                bgPos -= velocity;
-                bgPos2 -= velocity;
-                allPlatforms.Scroll(-velocity);
-            }      
+                    if (keyState.IsKeyDown(Keys.Up) &&
+                        !oldKeyState.IsKeyDown(Keys.Up) &&
+                        (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
+                        allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
+                    {
+                        velocity.Y = -jumpPower;
+                    }
 
+                    // Platform Collision //
+                    if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) ||
+                        allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
+                    {
+                        if (velocity.X > 0) velocity.X = 0;
+                    }
+                    else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) ||
+                        allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
+                    {
+                        if (velocity.X < 0) velocity.X = 0;
+                    }
+                    if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
+                        allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
+                    {
+                        if (velocity.Y > 0) velocity.Y = 0;
+                    }
+                    else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) ||
+                        allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
+                    {
+                        if (velocity.Y < 0) velocity.Y = 0;
+                    }
+
+                    bgPos -= velocity;
+                    bgPos2 -= velocity;
+
+                    allPlatforms.Scroll(-velocity);
+                }
+            }
+            else if (currentGameState == GameStateType.Victory)
+            {
+                ////TODO
+            }
+            else if (currentGameState == GameStateType.Defeat)
+            {
+                ////TODO
+            }
+
+            oldKeyState = keyState;
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.LightGreen);
 
             //spriteBatch.Begin(SpriteSortMode.FrontToBack);
             spriteBatch.Begin();
-
 
             //Background
             spriteBatch.Draw(
@@ -156,7 +202,8 @@
                 0f, 
                 new Vector2(testBackground.Width / 2, testBackground.Height / 2), 
                 (bgSize.X * Resolution.X) / testBackground.Width, 
-                SpriteEffects.None, 1f);
+                SpriteEffects.None, 
+                1f);
 
             //The platform is being drawn
             foreach (Platform p in allPlatforms.Rocks)
@@ -171,7 +218,8 @@
                         0f,
                         new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), 
                         (p.Size.X * Resolution.X) / p.TheTexture.Width, 
-                        SpriteEffects.None, 1f);
+                        SpriteEffects.None, 
+                        1f);
                 }
             }
 
@@ -185,7 +233,8 @@
                 new Vector2(defaultTexture.Width / 2, 
                 defaultTexture.Height / 2),
                 (thePlayer.Size.X*Resolution.X)/defaultTexture.Width, 
-                SpriteEffects.None, 1f);
+                SpriteEffects.None, 
+                1f);
             
             //Players' collision points being drawn , they will always be 8
             for (int i = 0;i < thePlayer.CollisionPoints.Length;i++)

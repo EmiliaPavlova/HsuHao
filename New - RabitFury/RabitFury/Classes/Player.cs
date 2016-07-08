@@ -31,8 +31,6 @@
             CollisionPoints[7] = new Vector2(playerX + (setSize.X * edgeShiftX), playerY - (setSize.Y / 2)); //Top-Right Point//
         }
 
-
-
         public static Vector2 Position
         {
             get
