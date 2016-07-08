@@ -30,8 +30,16 @@
         private Texture2D[] terrain;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
-        private Vector2 bgPos = new Vector2(0.445f, 0.28125f);
-        private Vector2 bgPos2 = new Vector2(1.445f, 0.28125f);
+        private Vector2[] backgrounds = new Vector2[7]
+        {
+            new Vector2(0.445f, 0.28125f),
+            new Vector2(1.445f, 0.28125f),
+            new Vector2(2.445f, 0.28125f),
+            new Vector2(3.445f, 0.28125f),
+            new Vector2(4.445f, 0.28125f),
+            new Vector2(5.445f, 0.28125f),
+            new Vector2(6.445f, 0.28125f)
+        };
 
         private Vector2 velocity = new Vector2(0, 0);
 
@@ -156,8 +164,10 @@
                         if (velocity.Y < 0) velocity.Y = 0;
                     }
 
-                    bgPos -= velocity;
-                    bgPos2 -= velocity;
+                    for (int j = 0; j < backgrounds.Length; j++)
+                    {
+                        backgrounds[j] -= velocity;
+                    }
 
                     allPlatforms.Scroll(-velocity);
                 }
@@ -182,29 +192,21 @@
             //spriteBatch.Begin(SpriteSortMode.FrontToBack);
             spriteBatch.Begin();
 
-            //Background
-            spriteBatch.Draw(
+            //Background is being drawn here: 
+            foreach (var background in backgrounds)
+            {
+                spriteBatch.Draw(
                 testBackground,
-                bgPos * Resolution.X,
+                background * Resolution.X,
                 null,
                 Color.White,
                 0f,
                 new Vector2(testBackground.Width / 2,
                 testBackground.Height / 2),
-                (bgSize.X*Resolution.X)/testBackground.Width,
+                (bgSize.X * Resolution.X) / testBackground.Width,
                 SpriteEffects.None,
                 1f);
-
-            spriteBatch.Draw(
-                testBackground, 
-                bgPos2 * Resolution.X, 
-                null,
-                Color.White,
-                0f, 
-                new Vector2(testBackground.Width / 2, testBackground.Height / 2), 
-                (bgSize.X * Resolution.X) / testBackground.Width, 
-                SpriteEffects.None, 
-                1f);
+            }
 
             //The platform is being drawn
             foreach (Platform p in allPlatforms.Rocks)
