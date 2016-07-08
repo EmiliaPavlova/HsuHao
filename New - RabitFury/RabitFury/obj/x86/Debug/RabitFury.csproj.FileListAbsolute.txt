@@ -189,3 +189,4 @@ C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Normal.png
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Main_Menu_BG.png
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu_BG.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\BG_Blur.png
