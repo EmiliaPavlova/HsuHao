@@ -6,8 +6,8 @@
 
     using Classes;
     using Classes.GameObject;
+    using Classes.Menu;
     using Enums;
-    using RabitFury.Classes.Menu;
 
     public class Game1 : Game
     {
@@ -123,6 +123,8 @@
 
             if (keyState.IsKeyDown(Keys.P) && !oldKeyState.IsKeyDown(Keys.P))
             {
+                resumeBtn.ButtonState = ButtonStateType.Hovered; ////TODO
+
                 if (currentGameState == GameStateType.InGame)
                 {
                     currentGameState = GameStateType.Pause;
@@ -219,9 +221,9 @@
 
             if (currentGameState == GameStateType.Pause)
             {
-                ButtonUtilities.Draw(resumeBtn, spriteBatch, 1);
-                ButtonUtilities.Draw(optionsBtn, spriteBatch, 0);
-                ButtonUtilities.Draw(exitBtn, spriteBatch, 0);
+                ButtonUtilities.Draw(resumeBtn, spriteBatch, (int)resumeBtn.ButtonState);
+                ButtonUtilities.Draw(optionsBtn, spriteBatch, (int)optionsBtn.ButtonState);
+                ButtonUtilities.Draw(exitBtn, spriteBatch, (int)exitBtn.ButtonState);
 
                 spriteBatch.Draw(
                     pauseBackground,
