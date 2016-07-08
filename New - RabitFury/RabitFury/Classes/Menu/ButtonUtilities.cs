@@ -47,6 +47,8 @@
 
         public static void Draw(MenuButton button, SpriteBatch spriteBatch, int buttonStateIndex)
         {
+            MenuVerification.ButtonStateTypeVerification(buttonStateIndex);
+
             spriteBatch.Draw(
                     button.ButtonTextures[buttonStateIndex],
                     button.ButtonPosition,
