@@ -14,7 +14,7 @@
             List<Platform> tempList = new List<Platform>();
 
             Random random = new Random();
-            for (int i = 0; i < 60; i++)
+            for (int i = 0; i < 61; i++)
             {
                 if(i > 5 && (i == 9 || i == 15 || i == 17 || i == 23 || i == 29 || i == 33 || i == 35 || i == 39 || i == 45))
                 {
@@ -37,7 +37,7 @@
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[1], PlatformType.Dirt));
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
                 }
-                if(i == 54)
+                if(i == 56)
                 {
                     tempList.Add(new Platform(new Vector2((0.11f * i) + 0.25f, 0.22f), new Vector2(1.1f, 1.1f), Color.White, null, PlatformType.Dirt));
                 }
