@@ -35,6 +35,7 @@
         private Texture2D testBackground;
         private Texture2D brickTexture;
         private Texture2D[] terrain;
+        private Texture2D[] collectableTextures;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
         private Vector2[] backgrounds = new Vector2[7]
@@ -51,6 +52,8 @@
         private Vector2 velocity = new Vector2(0, 0);
 
         private AllPlatforms allPlatforms;
+
+        private AllCollectables allCollectables;
 
         private Player thePlayer;
 
@@ -105,8 +108,14 @@
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
             }
+            collectableTextures = new Texture2D[2];
+            collectableTextures[0] = Content.Load<Texture2D>("Collectables/carrot");
+            collectableTextures[1] = Content.Load<Texture2D>("Collectables/lettuce");
+
+
             //Initialize//
             allPlatforms = new AllPlatforms(terrain);
+            allCollectables = new AllCollectables(collectableTextures);
         }
 
         protected override void UnloadContent() { }
@@ -198,6 +207,7 @@
                     }
 
                     allPlatforms.Scroll(-velocity);
+                    allCollectables.Scroll(-velocity);
                 }
             }
             else if (currentGameState == GameStateType.Victory)
@@ -312,6 +322,23 @@
                     0.1f);
             }
 
+            foreach (Collectable c in allCollectables.collectables)
+            {
+                if (c.TheTexture != null)
+                {
+                    spriteBatch.Draw(
+                    c.TheTexture,
+                    c.Position * Resolution.X,
+                    null,
+                    c.TheColor,
+                    0f,
+                    new Vector2(c.TheTexture.Width / 2,
+                    c.TheTexture.Height / 2),
+                    (c.Size.X * Resolution.X) / c.TheTexture.Width,
+                    SpriteEffects.None,
+                    0.1f);
+                }
+            }
             spriteBatch.End();
 
             base.Draw(gameTime);
