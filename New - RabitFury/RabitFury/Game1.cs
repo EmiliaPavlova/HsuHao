@@ -177,7 +177,7 @@
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGreen);
+            GraphicsDevice.Clear(new Color(216, 251, 248));
 
             //spriteBatch.Begin(SpriteSortMode.FrontToBack);
             spriteBatch.Begin();
