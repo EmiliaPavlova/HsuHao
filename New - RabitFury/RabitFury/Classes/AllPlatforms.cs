@@ -11,22 +11,22 @@
     {
         public AllPlatforms(Texture2D[] texture)
         {
-            this.rocks = MapGenerator.GeneratePlatform(texture);
+            this.Rocks = MapGenerator.GeneratePlatform(texture);
         }
 
-        public List<Platform> rocks = new List<Platform>();
+        public List<Platform> Rocks { get; set; }
 
         public void Scroll(Vector2 theOffSet)
         {
-            for (int i = 0; i < rocks.Count; i++)
+            for (int i = 0; i < Rocks.Count; i++)
             {
-                rocks[i].Scroll(theOffSet);
+                Rocks[i].Scroll(theOffSet);
             }
         }
 
         public bool IfCollide(Vector2 point)
         {
-            foreach (Platform r in rocks)
+            foreach (Platform r in Rocks)
             {
                 if (r.IfCollide(point))
                 {

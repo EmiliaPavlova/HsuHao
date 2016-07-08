@@ -206,7 +206,7 @@
                 1f);
 
             //The platform is being drawn
-            foreach (Platform p in allPlatforms.rocks)
+            foreach (Platform p in allPlatforms.Rocks)
             {
                 if(p.TheTexture != null)
                 {
