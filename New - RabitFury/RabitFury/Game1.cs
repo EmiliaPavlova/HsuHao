@@ -30,7 +30,7 @@
         private Texture2D[] terrain;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
-        private Vector2 bgPos = new Vector2(0.5f, 0.28125f);
+        private Vector2 bgPos = new Vector2(0.445f, 0.28125f);
         private Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
 
         private Vector2 velocity = new Vector2(0, 0);
