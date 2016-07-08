@@ -7,12 +7,17 @@
     using Classes;
     using Classes.GameObject;
     using Enums;
+    using RabitFury.Classes.Menu;
 
     public class Game1 : Game
     {
         private const float JumpPower = 0.010f;
         private const float Gravity = 0.0002f;
         private const float MaxVelocity = 0.004f;
+
+        MenuButton resumeBtn;
+        MenuButton optionsBtn;
+        MenuButton exitBtn;
 
         public static Vector2 Resolution = new Vector2(1024, 700);
 
@@ -70,6 +75,10 @@
         protected override void Initialize()
         {
             // Player set with size { X,Y} // aspect ratio is 3:5 //
+            resumeBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight));
+            optionsBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight));
+            exitBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight));
+
             thePlayer = new Player(new Vector2(0.045f, 0.075f));
             base.Initialize();
         }
@@ -78,14 +87,20 @@
         {
             //Load with textures//
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            ButtonUtilities.Load(Content);
+
             pauseBackground = Content.Load<Texture2D>("GUI/Menu_BG");
             backgroundOverlay = Content.Load<Texture2D>("GUI/BG_Blur");
+
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
-            testBackground = Content.Load<Texture2D>("Textures/TheBG");
-            brickTexture = Content.Load<Texture2D>("Textures/Brick");
-            terrain = new Texture2D[19];
 
+            testBackground = Content.Load<Texture2D>("Textures/TheBG");
+
+            brickTexture = Content.Load<Texture2D>("Textures/Brick");
+
+            terrain = new Texture2D[19];
             for (int i = 0; i < terrain.Length; i++)
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
@@ -200,11 +215,14 @@
         {
             GraphicsDevice.Clear(new Color(216, 251, 248));
 
-            //spriteBatch.Begin(SpriteSortMode.FrontToBack);
             spriteBatch.Begin(SpriteSortMode.FrontToBack);
 
             if (currentGameState == GameStateType.Pause)
             {
+                ButtonUtilities.Draw(resumeBtn, spriteBatch, 1);
+                ButtonUtilities.Draw(optionsBtn, spriteBatch, 0);
+                ButtonUtilities.Draw(exitBtn, spriteBatch, 0);
+
                 spriteBatch.Draw(
                     pauseBackground,
                     new Vector2(
@@ -216,7 +234,7 @@
                     Vector2.Zero,
                     0.6f,
                     SpriteEffects.None,
-                    1f);
+                    0.9f);
 
                 spriteBatch.Draw(
                     backgroundOverlay,
@@ -227,7 +245,7 @@
                     Vector2.Zero,
                     1f,
                     SpriteEffects.None,
-                    1f);
+                    0.9f);
             }
 
             //Background is being drawn here: 
@@ -291,7 +309,6 @@
                     SpriteEffects.None,
                     0.1f);
             }
-
 
             spriteBatch.End();
 

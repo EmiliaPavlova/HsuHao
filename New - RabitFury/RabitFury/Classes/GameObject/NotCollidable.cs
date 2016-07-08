@@ -9,8 +9,6 @@
     public abstract class NotCollidable : GameObject, IAnimatable
     {
         public NotCollidable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture) 
-            : base(setPos, setSize, setColor, setTexture)
-        {
-        }
+            : base(setPos, setSize, setColor, setTexture) { }
     }
 }

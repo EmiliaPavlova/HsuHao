@@ -2,6 +2,7 @@
 {
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Content;
 
     using Enums;
     using Constants;
@@ -9,35 +10,44 @@
     public class MenuButton
     {
         private Texture2D[] buttonTextures;
-        float layerDepth;
-        int buttonState;
+        private string[] buttonStatesDir;
+        private float layerDepth;
+        private int buttonState;
 
         public MenuButton(
             Vector2 position,
-            Vector2 size,
+            float scale,
+            ContentManager content,
             float layerDepth,
-            Texture2D textureNormalState,
-            Texture2D textureHoverState,
-            Texture2D textureClickState,
-            Texture2D textureLockState)
+            string btnNormalStateDir,
+            string btnHoverStateDir,
+            string btnClickStateDir,
+            string btnLockStateDir)
         {
             this.ButtonColor = Color.White;
 
             this.ButtonPosition = position;
-            this.ButtonSize = size;
+            this.ButtonScale = scale;
+            this.LayerDepth = layerDepth;
+
+            this.buttonStatesDir = new string[4];
+            this.buttonStatesDir[0] = btnNormalStateDir;
+            this.buttonStatesDir[1] = btnHoverStateDir;
+            this.buttonStatesDir[2] = btnClickStateDir;
+            this.buttonStatesDir[3] = btnLockStateDir;
 
             this.buttonTextures = new Texture2D[4];
-            this.buttonTextures[0] = textureNormalState;
-            this.buttonTextures[1] = textureHoverState;
-            this.buttonTextures[2] = textureClickState;
-            this.buttonTextures[3] = textureLockState;
+            this.buttonTextures[0] = content.Load<Texture2D>(btnNormalStateDir);
+            this.buttonTextures[1] = content.Load<Texture2D>(btnHoverStateDir);
+            this.buttonTextures[2] = content.Load<Texture2D>(btnClickStateDir);
+            this.buttonTextures[3] = content.Load<Texture2D>(btnLockStateDir);
         }
 
         public Color ButtonColor { get; private set; }
 
         public Vector2 ButtonPosition { get; private set; }
 
-        public Vector2 ButtonSize { get; private set; }
+        public float ButtonScale { get; private set; }
 
         public float LayerDepth
         {
@@ -73,6 +83,14 @@
             set
             {
                 this.buttonState = (int)value;
+            }
+        }
+
+        public string[] ButtonStatesDirectory
+        {
+            get
+            {
+                return this.buttonStatesDir;
             }
         }
 
