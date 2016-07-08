@@ -47,7 +47,7 @@
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.76f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.87f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
                 }
-                if(i == 56)
+                if(i == 55)
                 {
                     tempList.Add(new Platform(new Vector2((0.11f * i) + 0.25f, 0.22f), new Vector2(1.1f, 1.1f), Color.White, null, PlatformType.Dirt));
                 }
