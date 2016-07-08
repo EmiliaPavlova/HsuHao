@@ -10,33 +10,34 @@
 
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private const float JUMP_POWER = 0.010f;
+        private const float GRAVITY = 0.0002f;
+        private const float MAX_VELOCITY = 0.004f;
 
-        KeyboardState oldKeyState;
+        public static Vector2 Resolution = new Vector2(800, 600);
 
-        GameStateType currentGameState = GameStateType.InGame;
+        private GameStateType currentGameState = GameStateType.InGame;
 
-        public static Vector2 Resolution = new Vector2(800,600);
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
 
-        Texture2D defaultTexture;
-        Texture2D testPointTexture;
-        Texture2D testBackground;
-        Texture2D brickTexture;
-        Texture2D[] terrain;
+        private KeyboardState oldKeyState;
 
-        Vector2 bgSize = new Vector2(1, 0.5625f);
-        Vector2 bgPos = new Vector2(0.5f, 0.28125f);
-        Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
+        private Texture2D defaultTexture;
+        private Texture2D testPointTexture;
+        private Texture2D testBackground;
+        private Texture2D brickTexture;
+        private Texture2D[] terrain;
 
-        Vector2 velocity = new Vector2(0, 0);
-        float jumpPower = 0.010f;
-        float gravity = 0.0002f;
-        float maxVelocity = 0.004f;
+        private Vector2 bgSize = new Vector2(1, 0.5625f);
+        private Vector2 bgPos = new Vector2(0.5f, 0.28125f);
+        private Vector2 bgPos2 = new Vector2(1.5f, 0.28125f);
 
-        AllPlatforms allPlatforms;
+        private Vector2 velocity = new Vector2(0, 0);
 
-        Player thePlayer;
+        private AllPlatforms allPlatforms;
+
+        private Player thePlayer;
 
         public Game1()
         {
@@ -110,9 +111,9 @@
                 for (int i = 0; i < 2; i++)
                 {
                     velocity.X = 0;
-                    if (velocity.Y < maxVelocity)
+                    if (velocity.Y < MAX_VELOCITY)
                     {
-                        velocity.Y += gravity;
+                        velocity.Y += GRAVITY;
                     }
 
                     if (keyState.IsKeyDown(Keys.Right))
@@ -130,7 +131,7 @@
                         (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
                         allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
                     {
-                        velocity.Y = -jumpPower;
+                        velocity.Y = -JUMP_POWER;
                     }
 
                     // Platform Collision //
