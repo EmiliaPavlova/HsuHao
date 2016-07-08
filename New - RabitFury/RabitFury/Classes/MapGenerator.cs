@@ -13,13 +13,15 @@
         {
             List<Platform> tempList = new List<Platform>();
 
-            Random random = new Random();
+
             for (int i = 0; i < 61; i++)
             {
                 if(i > 5 && (i == 9 || i == 15 || i == 17 || i == 23 || i == 29 || i == 33 || i == 35 || i == 39 || i == 45))
                 {
-                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[2], PlatformType.Dirt));
-                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[1], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.76f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.87f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
                     for (int current = i + 4;  i < current;  i++)
                     {
                         if (i == current - 1)
@@ -28,14 +30,21 @@
                             break;
                         }
                         tempList.Add(new Platform(new Vector2((0.11f * i) + 0.11f, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[18], PlatformType.Lava));
+                        tempList.Add(new Platform(new Vector2((0.11f * i) + 0.11f, 0.76f), new Vector2(0.11f, 0.11f), Color.White, theTexture[18], PlatformType.Lava));
+                        tempList.Add(new Platform(new Vector2((0.11f * i) + 0.11f, 0.87f), new Vector2(0.11f, 0.11f), Color.White, theTexture[18], PlatformType.Lava));
+                        tempList.Add(new Platform(new Vector2((0.11f * i) + 0.11f, 0.98f), new Vector2(0.11f, 0.11f), Color.White, theTexture[18], PlatformType.Lava));
                     }
-                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[0], PlatformType.Dirt));
-                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[1], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.76f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.87f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
                 }
                 else
                 {
                     tempList.Add(new Platform(new Vector2(0.11f * i, 0.54f), new Vector2(0.11f, 0.11f), Color.White, theTexture[1], PlatformType.Dirt));
-                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.65f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.76f), new Vector2(0.11f, 0.11f), Color.White, theTexture[4], PlatformType.Dirt));
+                    tempList.Add(new Platform(new Vector2(0.11f * i, 0.87f), new Vector2(0.11f, 0.11f), Color.White, theTexture[8], PlatformType.Dirt));
                 }
                 if(i == 56)
                 {

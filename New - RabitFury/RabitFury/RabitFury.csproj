@@ -38,15 +38,18 @@
     <ApplicationIcon>RabitFury.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
     <Compile Include="Classes\GameControls.cs" />
+    <Compile Include="Classes\GameObject\BackgroundObject.cs" />
     <Compile Include="Classes\GameObject\GameObject.cs" />
+    <Compile Include="Classes\GameObject\NotCollidable.cs" />
     <Compile Include="Classes\MapGenerator.cs" />
     <Compile Include="Classes\Menu\MenuButton.cs" />
-    <Compile Include="Classes\GameObject\Obstacle.cs" />
+    <Compile Include="Classes\GameObject\Collidable.cs" />
     <Compile Include="Classes\Menu\MenuNavigation.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\GameObject\Platform.cs" />
-    <Compile Include="Classes\AllPlatforms.cs" />
+    <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
     <Compile Include="Constants\Global.cs" />
     <Compile Include="Enums\ButtonStateType.cs" />
     <Compile Include="Enums\PlatformType.cs" />
