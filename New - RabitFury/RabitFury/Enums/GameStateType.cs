@@ -2,9 +2,10 @@
 {
     public enum GameStateType
     {
+        MainMenu,
         InGame,
-        InMenu,
-        HasWon,
-        HasDied
+        Pause,
+        Victory,
+        Defeat
     }
 }
