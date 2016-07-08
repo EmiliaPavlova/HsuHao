@@ -23,6 +23,7 @@
 
         private KeyboardState oldKeyState;
 
+        private Texture2D pauseBackground;
         private Texture2D defaultTexture;
         private Texture2D testPointTexture;
         private Texture2D testBackground;
@@ -48,24 +49,25 @@
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
         }
-        
+
         protected override void Initialize()
         {
             // Player set with size { X,Y} // aspect ratio is 3:5 //
-            thePlayer = new Player(new Vector2(0.045f,0.075f)); 
+            thePlayer = new Player(new Vector2(0.045f, 0.075f));
             base.Initialize();
         }
-        
+
         protected override void LoadContent()
         {
             //Load with textures//
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            pauseBackground = Content.Load<Texture2D>("GUI/Menu_BG");
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
             testBackground = Content.Load<Texture2D>("Textures/TheBG");
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
             terrain = new Texture2D[19];
-            
+
             for (int i = 0; i < terrain.Length; i++)
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
@@ -73,7 +75,7 @@
             //Initialize//
             allPlatforms = new AllPlatforms(terrain);
         }
-        
+
         protected override void UnloadContent() { }
 
         protected override void Update(GameTime gameTime)
@@ -96,7 +98,7 @@
                 {
                     currentGameState = GameStateType.InGame;
                 }
-            } 
+            }
 
             if (currentGameState == GameStateType.MainMenu)
             {
@@ -180,7 +182,23 @@
             GraphicsDevice.Clear(new Color(216, 251, 248));
 
             //spriteBatch.Begin(SpriteSortMode.FrontToBack);
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.FrontToBack);
+
+            if (currentGameState == GameStateType.Pause)
+            {
+                spriteBatch.Draw(
+                pauseBackground,
+                new Vector2(
+                0.32f * graphics.PreferredBackBufferWidth,
+                0.10f * graphics.PreferredBackBufferHeight),
+                null,
+                Color.White,
+                0f,
+                Vector2.Zero,
+                0.6f,
+                SpriteEffects.None,
+                1f);
+            }
 
             //Background
             spriteBatch.Draw(
@@ -191,65 +209,65 @@
                 0f,
                 new Vector2(testBackground.Width / 2,
                 testBackground.Height / 2),
-                (bgSize.X*Resolution.X)/testBackground.Width,
+                (bgSize.X * Resolution.X) / testBackground.Width,
                 SpriteEffects.None,
-                1f);
+                0f);
 
             spriteBatch.Draw(
-                testBackground, 
-                bgPos2 * Resolution.X, 
+                testBackground,
+                bgPos2 * Resolution.X,
                 null,
                 Color.White,
-                0f, 
-                new Vector2(testBackground.Width / 2, testBackground.Height / 2), 
-                (bgSize.X * Resolution.X) / testBackground.Width, 
-                SpriteEffects.None, 
-                1f);
+                0f,
+                new Vector2(testBackground.Width / 2, testBackground.Height / 2),
+                (bgSize.X * Resolution.X) / testBackground.Width,
+                SpriteEffects.None,
+                0f);
 
             //The platform is being drawn
             foreach (Platform p in allPlatforms.Rocks)
             {
-                if(p.TheTexture != null)
+                if (p.TheTexture != null)
                 {
                     spriteBatch.Draw(
-                        p.TheTexture, 
+                        p.TheTexture,
                         p.Position * Resolution.X,
-                        null, 
+                        null,
                         p.TheColor,
                         0f,
-                        new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), 
-                        (p.Size.X * Resolution.X) / p.TheTexture.Width, 
-                        SpriteEffects.None, 
-                        1f);
+                        new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2),
+                        (p.Size.X * Resolution.X) / p.TheTexture.Width,
+                        SpriteEffects.None,
+                        0.1f);
                 }
             }
 
             //Player being drawn
             spriteBatch.Draw(
-                defaultTexture, 
-                Player.Position*Resolution.X, 
+                defaultTexture,
+                Player.Position * Resolution.X,
                 null,
-                new Color(105, 110, 255), 
+                new Color(105, 110, 255),
                 0f,
-                new Vector2(defaultTexture.Width / 2, 
+                new Vector2(defaultTexture.Width / 2,
                 defaultTexture.Height / 2),
-                (thePlayer.Size.X*Resolution.X)/defaultTexture.Width, 
-                SpriteEffects.None, 
-                1f);
-            
+                (thePlayer.Size.X * Resolution.X) / defaultTexture.Width,
+                SpriteEffects.None,
+                0.1f);
+
             //Players' collision points being drawn , they will always be 8
-            for (int i = 0;i < thePlayer.CollisionPoints.Length;i++)
+            for (int i = 0; i < thePlayer.CollisionPoints.Length; i++)
             {
                 spriteBatch.Draw(
-                    testPointTexture, 
-                    thePlayer.CollisionPoints[i]*Resolution.X, 
-                    null, 
+                    testPointTexture,
+                    thePlayer.CollisionPoints[i] * Resolution.X,
+                    null,
                     Color.Red,
-                    0f, 
-                    new Vector2(2, 2), 
-                    1f, 
-                    SpriteEffects.None, 
-                    1f);
+                    0f,
+                    new Vector2(2, 2),
+                    1f,
+                    SpriteEffects.None,
+                    0.1f);
             }
 
             spriteBatch.End();

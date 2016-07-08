@@ -183,3 +183,9 @@ C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\UselessLava.png
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\UselessLava.png
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Textures\19.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Clicked.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Hover.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Locked.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Normal.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Main_Menu_BG.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu_BG.png
