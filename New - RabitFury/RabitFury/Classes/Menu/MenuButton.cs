@@ -48,13 +48,13 @@
 
             set
             {
-                if (value < Global.MIN_LAYER_DEPTH)
+                if (value < Global.MinLayerDepth)
                 {
-                    this.layerDepth = Global.MIN_LAYER_DEPTH;
+                    this.layerDepth = Global.MinLayerDepth;
                 }
-                else if (value > Global.MAX_LAYER_DEPTH)
+                else if (value > Global.MaxLayerDepth)
                 {
-                    this.layerDepth = Global.MAX_LAYER_DEPTH;
+                    this.layerDepth = Global.MaxLayerDepth;
                 }
                 else
                 {

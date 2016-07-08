@@ -5,14 +5,15 @@
 
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+
     using GameObject;
     using Enums;
+
     public static class MapGenerator
     {
         public static List<Platform> GeneratePlatform(Texture2D[] theTexture)
         {
             List<Platform> tempList = new List<Platform>();
-
 
             for (int i = 0; i < 61; i++)
             {
@@ -72,7 +73,6 @@
             }
             tempList.Add(new Platform(new Vector2(0.07f , 0.22f), new Vector2(0.71f, 0.71f), Color.White, null, PlatformType.Dirt));
             tempList.Add(new Platform(new Vector2(0.00f, 0.75f), new Vector2(100f, 0.1f), Color.White, null, PlatformType.Dirt));
-
 
             return tempList;
         }

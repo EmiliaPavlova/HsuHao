@@ -38,6 +38,7 @@
     <ApplicationIcon>RabitFury.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\Menu\MenuButtonsGenerator.cs" />
     <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
     <Compile Include="Classes\GameControls.cs" />
     <Compile Include="Classes\GameObject\BackgroundObject.cs" />

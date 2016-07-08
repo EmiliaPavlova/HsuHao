@@ -1,10 +1,9 @@
 ﻿namespace RabitFury.Classes.GameObject
 {
-    using System;
-
-    using Interfaces;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+
+    using Interfaces;
     using Enums;
 
     public class Platform : Collidable, IAnimatable, ICollidable

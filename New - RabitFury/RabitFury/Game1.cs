@@ -10,9 +10,9 @@
 
     public class Game1 : Game
     {
-        private const float JUMP_POWER = 0.010f;
-        private const float GRAVITY = 0.0002f;
-        private const float MAX_VELOCITY = 0.004f;
+        private const float JumpPower = 0.010f;
+        private const float Gravity = 0.0002f;
+        private const float MaxVelocity = 0.004f;
 
         public static Vector2 Resolution = new Vector2(1024, 700);
 
@@ -48,6 +48,14 @@
         private AllPlatforms allPlatforms;
 
         private Player thePlayer;
+
+        public GraphicsDeviceManager GetGraphics
+        {
+            get
+            {
+                return this.graphics;
+            }
+        }
 
         public Game1()
         {
@@ -109,8 +117,7 @@
                     currentGameState = GameStateType.InGame;
                 }
             }
-
-            if (currentGameState == GameStateType.MainMenu)
+            else if (currentGameState == GameStateType.MainMenu)
             {
                 ////TODO
             }
@@ -123,9 +130,9 @@
                 for (int i = 0; i < 2; i++)
                 {
                     velocity.X = 0;
-                    if (velocity.Y < MAX_VELOCITY)
+                    if (velocity.Y < MaxVelocity)
                     {
-                        velocity.Y += GRAVITY;
+                        velocity.Y += Gravity;
                     }
 
                     if (keyState.IsKeyDown(Keys.Right))
@@ -143,7 +150,7 @@
                         (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
                         allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
                     {
-                        velocity.Y = -JUMP_POWER;
+                        velocity.Y = -JumpPower;
                     }
 
                     // Platform Collision //
