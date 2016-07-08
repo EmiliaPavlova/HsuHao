@@ -23,6 +23,7 @@
 
         private KeyboardState oldKeyState;
 
+        private Texture2D pauseBackground;
         private Texture2D defaultTexture;
         private Texture2D testPointTexture;
         private Texture2D testBackground;
@@ -68,6 +69,7 @@
         {
             //Load with textures//
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            pauseBackground = Content.Load<Texture2D>("GUI/Menu_BG");
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
             testBackground = Content.Load<Texture2D>("Textures/TheBG");
@@ -190,7 +192,23 @@
             GraphicsDevice.Clear(new Color(216, 251, 248));
 
             //spriteBatch.Begin(SpriteSortMode.FrontToBack);
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.FrontToBack);
+
+            if (currentGameState == GameStateType.Pause)
+            {
+                spriteBatch.Draw(
+                pauseBackground,
+                new Vector2(
+                0.32f * graphics.PreferredBackBufferWidth,
+                0.10f * graphics.PreferredBackBufferHeight),
+                null,
+                Color.White,
+                0f,
+                Vector2.Zero,
+                0.6f,
+                SpriteEffects.None,
+                1f);
+            }
 
             //Background is being drawn here: 
             foreach (var background in backgrounds)
@@ -205,7 +223,7 @@
                 testBackground.Height / 2),
                 (bgSize.X * Resolution.X) / testBackground.Width,
                 SpriteEffects.None,
-                1f);
+                0f);
             }
 
             //The platform is being drawn
@@ -222,7 +240,7 @@
                         new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2), 
                         (p.Size.X * Resolution.X) / p.TheTexture.Width, 
                         SpriteEffects.None, 
-                        1f);
+                        0.1f);
                 }
             }
 
@@ -237,7 +255,7 @@
                 defaultTexture.Height / 2),
                 (thePlayer.Size.X*Resolution.X)/defaultTexture.Width, 
                 SpriteEffects.None, 
-                1f);
+                0.1f);
             
             //Players' collision points being drawn , they will always be 8
             for (int i = 0;i < thePlayer.CollisionPoints.Length;i++)
@@ -251,7 +269,7 @@
                     new Vector2(2, 2), 
                     1f, 
                     SpriteEffects.None, 
-                    1f);
+                    0.1f);
             }
 
             spriteBatch.End();
