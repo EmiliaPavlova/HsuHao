@@ -41,7 +41,6 @@
         ////Menu Items---////
 
         private Player thePlayer;
-        private Vector2 velocity;
 
         private Texture2D backgroundOverlay;
         private Texture2D pauseBackground;
@@ -73,9 +72,7 @@
             exitBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight));
             ////Menu Items---////
 
-            // Player set with size { X,Y} // aspect ratio is 3:5 //
-            thePlayer = new Player(new Vector2(0.045f, 0.075f));
-            velocity = new Vector2(0, 0);
+            
             base.Initialize();
         }
 
@@ -107,6 +104,9 @@
 
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);
+
+            // Player set with size { X,Y} // aspect ratio is 3:5 //
+            thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);
         }
 
         protected override void UnloadContent() { }
