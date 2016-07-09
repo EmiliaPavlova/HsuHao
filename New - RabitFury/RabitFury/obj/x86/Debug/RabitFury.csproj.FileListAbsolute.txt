@@ -264,3 +264,4 @@ C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\Bunnies_right.png
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\RealBunnies.png
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Classes\GameObject\Collectable.cs
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\coin.png

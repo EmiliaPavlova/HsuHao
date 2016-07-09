@@ -7,9 +7,6 @@
     using Microsoft.Xna.Framework.Input;
     public class Player : RigidBody , IAnimateable
     {
-
-        public Vector2 Position { get; set; }
-        public Vector2 Size { get; private set; }
         public Vector2 EdgeShifts { get; set; }
         
         public Rectangle ViewRect { get; set; }
