@@ -1,6 +1,5 @@
 ﻿namespace RabitFury.Classes
 {
-    using System;
     using System.Collections.Generic;
     using GameObject;
     using Microsoft.Xna.Framework;
@@ -12,31 +11,28 @@
         {
             List<Collectable> collectables = new List<Collectable>();
 
-            Random random = new Random();
-
-            //TODO: Check positions with Platform
-
             //collectables.Add(new Collectable(new Vector2(0.8f, 0.465f), new Vector2(0.0335f, 0.05f), Color.White, theTexture[0]));
             //collectables.Add(new Collectable(new Vector2(1f, 0.47f), new Vector2(0.04f, 0.04f), Color.White, theTexture[1]));
+            //collectables.Add(new Collectable(new Vector2(1f, 0.35f), new Vector2(0.03f, 0.03f), Color.White, theTexture[2]));
 
-            for (int j = 1; j < 100; j++)
+            for (int i = 6, index = 1; i < 200; i += 2, index++)
             {
-                float i = random.Next(1, 100) * j * 0.04f;
-                //if (i > 5.0 &&
-                //    (i == 9 || i == 15 || i == 17 || i == 23 || i == 29 || i == 33 || i == 35 || i == 39 || i == 45))
-                //{
-                //    continue;
-                //}
-                //else
-                //{
-                    collectables.Add(new Collectable(new Vector2(i, 0.465f), new Vector2(0.0335f, 0.05f), Color.White, theTexture[0]));
-                //}
-            }
+                collectables.Add(new Collectable(new Vector2(i * index * 0.1f, 0.35f), new Vector2(0.03f, 0.03f), Color.White, theTexture[2]));
+                collectables.Add(new Collectable(new Vector2(i * index * 0.25f, 0.3f), new Vector2(0.03f, 0.03f), Color.White, theTexture[2]));
 
-            for (int j = 1; j < 100; j++)
-            {
-                float i = random.Next(1, 100) * j * 0.06f;
-                collectables.Add(new Collectable(new Vector2(i, 0.47f), new Vector2(0.04f, 0.04f), Color.White, theTexture[1]));
+                if (i < 9 || i > 12 && i < 16 || i > 19 && i < 24 || i > 26 && i < 30 || i > 33 && i < 35 || i > 39 && i < 45 || i > 48)
+                {
+                    if (i % 4 == 0)
+                    {
+                        collectables.Add(new Collectable(new Vector2(0.11f * i, 0.47f), new Vector2(0.04f, 0.04f),
+                            Color.White, theTexture[1]));
+                    }
+                    else
+                    {
+                        collectables.Add(new Collectable(new Vector2(0.11f * i, 0.465f), new Vector2(0.0335f, 0.05f),
+                            Color.White, theTexture[0]));
+                    }
+                }
             }
 
             return collectables;

@@ -100,9 +100,10 @@
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
             }
 
-            collectableTextures = new Texture2D[2];
+            collectableTextures = new Texture2D[3];
             collectableTextures[0] = Content.Load<Texture2D>("Collectables/carrot");
             collectableTextures[1] = Content.Load<Texture2D>("Collectables/lettuce");
+            collectableTextures[2] = Content.Load<Texture2D>("Collectables/coin");
 
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);
