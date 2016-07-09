@@ -6,7 +6,6 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using GameObject;
-    using Enums;
 
     public class AllPlatforms
     {
@@ -16,8 +15,6 @@
         }
 
         public List<Platform> Rocks { get; set; }
-
-        public bool HasBurned { get; set; }
 
         public void Scroll(Vector2 theOffSet)
         {
@@ -33,10 +30,6 @@
             {
                 if (r.IfCollide(point))
                 {
-                    if(r.MaterialID == PlatformType.Lava)
-                    {
-                        HasBurned = true;
-                    }
                     return true;
                 }
             }
