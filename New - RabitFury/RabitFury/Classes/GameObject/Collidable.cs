@@ -4,7 +4,7 @@
 
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-    using RabitFury.Interfaces;
+    using global::RabitFury.Interfaces;
 
     public abstract class Collidable : GameObject, IRenderable, ICollidable 
     {

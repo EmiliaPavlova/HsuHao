@@ -65,7 +65,7 @@
     <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\ICollectable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="RabitFury.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verification\Menu\MenuVerification.cs" />
   </ItemGroup>

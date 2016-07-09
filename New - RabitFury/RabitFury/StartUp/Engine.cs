@@ -5,7 +5,6 @@
     using Microsoft.Xna.Framework.Input;
 
     using Classes;
-    using Classes.GameObject;
     using Classes.Menu;
     using Enums;
 

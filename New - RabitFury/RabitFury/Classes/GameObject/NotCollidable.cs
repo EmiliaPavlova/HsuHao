@@ -2,7 +2,7 @@
 {
     using System;
 
-    using RabitFury.Interfaces;
+    using global::RabitFury.Interfaces;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
