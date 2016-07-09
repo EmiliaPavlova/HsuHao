@@ -6,10 +6,12 @@
 
     public class Collectable : GameObject, ICollectable
     {
+        private bool hasCollide;
+
         public Collectable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
             : base(setPos, setSize, setColor, setTexture)
         {
-            //setTexture = ?
+            this.hasCollide = false;
         }
 
         public bool HasCollide(Vector2 thePoint)
