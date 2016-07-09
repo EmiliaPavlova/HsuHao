@@ -3,7 +3,6 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Input;
 
-    using System;
     using Enums;
     using Classes.Menu;
     using Exceptions;
@@ -45,6 +44,7 @@
             }
             else if (currentGameState == GameStateType.InGame)
             {
+                IsMouseVisible = false;
                 for (int i = 0; i < 2; i++)
                 {
                     // Platform Collision //
