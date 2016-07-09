@@ -2,7 +2,7 @@
 {
     public static class Global
     {
-        public const float MinLayerDepth = 0f;
-        public const float MaxLayerDepth = 1f;
+        public static float MinLayerDepth = 0f;
+        public static float MaxLayerDepth = 1f;
     }
 }

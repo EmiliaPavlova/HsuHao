@@ -38,10 +38,9 @@
     <ApplicationIcon>RabitFury.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\AllCollectables.cs" />
     <Compile Include="Classes\CollectableGenerator.cs" />
-    <Compile Include="Classes\GameObject\Collectable.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="Classes\GameObject\Collectable.cs" />
     <Compile Include="Classes\GameObject\RigidBody.cs" />
     <Compile Include="Classes\Menu\ButtonUtilities.cs" />
     <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
@@ -55,10 +54,9 @@
     <Compile Include="Classes\Menu\MenuNavigation.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\GameObject\Platform.cs" />
-    <Compile Include="Classes\Wrappers\AllCollectables.cs" />
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
-    <Compile Include="Constants\Global.cs" />
-    <Compile Include="Exceptions\EndGameException.cs" />
+    <Compile Include="Constants\GlobalConstants.cs" />
+    <Compile Include="Constants\MenuConstants.cs" />
     <Compile Include="Interfaces\IAnimateable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
@@ -196,7 +194,7 @@
     <Content Include="RabitFury.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Constants\MenuConstants\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
