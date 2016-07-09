@@ -40,5 +40,30 @@
             CollisionPoints[7] = new Vector2(setPos.X + (setSize.X * EdgeShifts.X), setPos.Y - (setSize.Y / 2)); //Top-Right Point//
         }
         
+
+        public override void InteractWithWorld(AllPlatforms allPlatforms)
+        {
+            if (allPlatforms.IfCollide(this.CollisionPoints[0]) ||
+                        allPlatforms.IfCollide(this.CollisionPoints[1]))
+            {
+                if (this.Velocity.X > 0) this.Velocity = new Vector2(0, this.Velocity.Y);
+            }
+            else if (allPlatforms.IfCollide(this.CollisionPoints[4]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[5]))
+            {
+                if (this.Velocity.X < 0) this.Velocity = new Vector2(0, this.Velocity.Y);
+            }
+
+            if (allPlatforms.IfCollide(this.CollisionPoints[2]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[3]))
+            {
+                if (this.Velocity.Y > 0) this.Velocity = new Vector2(this.Velocity.X, 0);
+            }
+            else if (allPlatforms.IfCollide(this.CollisionPoints[6]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[7]))
+            {
+                if (this.Velocity.Y < 0) this.Velocity = new Vector2(this.Velocity.X, 0);
+            }
+        }
     }
 }

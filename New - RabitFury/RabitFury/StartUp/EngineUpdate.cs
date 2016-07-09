@@ -69,27 +69,8 @@
                     }
 
                     // Platform Collision //
-                    if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
-                    {
-                        if (thePlayer.Velocity.X > 0) thePlayer.Velocity = new Vector2(0, thePlayer.Velocity.Y);
-                    }
-                    else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
-                    {
-                        if (thePlayer.Velocity.X < 0) thePlayer.Velocity = new Vector2(0, thePlayer.Velocity.Y);
-                    }
 
-                    if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
-                    {
-                        if (thePlayer.Velocity.Y > 0) thePlayer.Velocity = new Vector2(thePlayer.Velocity.X, 0);
-                    }
-                    else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
-                    {
-                        if (thePlayer.Velocity.Y < 0) thePlayer.Velocity = new Vector2(thePlayer.Velocity.X, 0);
-                    }
+                    thePlayer.InteractWithWorld(allPlatforms);
 
                     for (int j = 0; j < backgrounds.Length; j++)
                     {
