@@ -259,3 +259,7 @@ C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x8
 C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache
 C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\Bunnies_right.png
 C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\RealBunnies.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\carrot.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\lettuce.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\Bunnies_right.png
+C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\RealBunnies.png
