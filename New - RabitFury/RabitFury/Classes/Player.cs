@@ -3,6 +3,7 @@
     using GameObject;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
     public class Player : RigidBody
     {
 
@@ -41,8 +42,33 @@
         }
         
 
-        public override void InteractWithWorld(AllPlatforms allPlatforms)
+        public void InteractWithWorld(AllPlatforms allPlatforms,KeyboardState keyState,float[] worldArgs)
         {
+            this.Velocity = new Vector2(0, this.Velocity.Y);
+            if (this.Velocity.Y < worldArgs[2]) //worldArgs[2] is MaxVelocity//
+            {
+                this.Velocity = new Vector2(this.Velocity.X, this.Velocity.Y + worldArgs[1]); // worldArgs[1] is Gravity//
+            }
+
+            if (keyState.IsKeyDown(Keys.Right))
+            {
+                this.Velocity = new Vector2(0.003f, this.Velocity.Y);
+            }
+
+            if (keyState.IsKeyDown(Keys.Left))
+            {
+                this.Velocity = new Vector2(-0.003f, this.Velocity.Y);
+            }
+
+            if (keyState.IsKeyDown(Keys.Up) &&
+                (allPlatforms.IfCollide(this.CollisionPoints[2]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[3])))
+            {
+                this.Velocity = new Vector2(this.Velocity.X, -worldArgs[0]); //worldArgs[0] is JumpPower//
+            }
+
+
+
             if (allPlatforms.IfCollide(this.CollisionPoints[0]) ||
                         allPlatforms.IfCollide(this.CollisionPoints[1]))
             {

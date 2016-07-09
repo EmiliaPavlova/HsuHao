@@ -44,33 +44,9 @@
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    thePlayer.Velocity = new Vector2(0, thePlayer.Velocity.Y);
-                    if (thePlayer.Velocity.Y < MaxVelocity)
-                    {
-                        thePlayer.Velocity = new Vector2(thePlayer.Velocity.X, thePlayer.Velocity.Y + Gravity);
-                    }
-
-                    if (keyState.IsKeyDown(Keys.Right))
-                    {
-                        thePlayer.Velocity = new Vector2(0.003f, thePlayer.Velocity.Y);
-                    }
-
-                    if (keyState.IsKeyDown(Keys.Left))
-                    {
-                        thePlayer.Velocity = new Vector2(-0.003f, thePlayer.Velocity.Y);
-                    }
-
-                    if (keyState.IsKeyDown(Keys.Up) &&
-                        !oldKeyState.IsKeyDown(Keys.Up) &&
-                        (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
-                    {
-                        thePlayer.Velocity = new Vector2(thePlayer.Velocity.X, -JumpPower);
-                    }
-
                     // Platform Collision //
 
-                    thePlayer.InteractWithWorld(allPlatforms);
+                    thePlayer.InteractWithWorld(allPlatforms,keyState,new float[] {JumpPower,Gravity,MaxVelocity});
 
                     for (int j = 0; j < backgrounds.Length; j++)
                     {
