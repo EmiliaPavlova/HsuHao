@@ -3,8 +3,10 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Input;
 
+    using System;
     using Enums;
     using Classes.Menu;
+    using Exceptions;
 
     public partial class Engine
     {
@@ -20,6 +22,8 @@
 
             if (keyState.IsKeyDown(Keys.P) && !oldKeyState.IsKeyDown(Keys.P))
             {
+                resumeBtn.ButtonState = ButtonStateType.Hovered; ////TODO
+
                 if (currentGameState == GameStateType.InGame)
                 {
                     MenuNavigation.Reset();
@@ -38,7 +42,6 @@
             else if (currentGameState == GameStateType.Pause)
             {
                 MenuNavigation.Navigate(keyState, oldKeyState);
-                MenuNavigation.UpdateButtons(resumeBtn, optionsBtn, exitBtn);
             }
             else if (currentGameState == GameStateType.InGame)
             {
@@ -55,6 +58,12 @@
 
                     allPlatforms.Scroll(-thePlayer.Velocity);
                     allCollectables.Scroll(-thePlayer.Velocity);
+
+                    if(allPlatforms.HasBurned == true)
+                    {
+                        currentGameState = GameStateType.Defeat;
+                        throw new EndGameException("Zaeka uide u lavata");
+                    }
                 }
             }
             else if (currentGameState == GameStateType.Victory)
