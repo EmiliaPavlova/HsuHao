@@ -15,6 +15,7 @@
         private int buttonState;
 
         public MenuButton(
+            ButtonActionType btnAction,
             Vector2 position,
             float scale,
             ContentManager content,
@@ -25,6 +26,8 @@
             string btnLockStateDir)
         {
             this.ButtonColor = Color.White;
+
+            this.ButtonAction = btnAction;
 
             this.ButtonPosition = position;
             this.ButtonScale = scale;
@@ -42,6 +45,8 @@
             this.buttonTextures[2] = content.Load<Texture2D>(btnClickStateDir);
             this.buttonTextures[3] = content.Load<Texture2D>(btnLockStateDir);
         }
+
+        public ButtonActionType ButtonAction { get; private set; }
 
         public Color ButtonColor { get; private set; }
 

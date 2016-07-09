@@ -40,7 +40,7 @@
             else if (currentGameState == GameStateType.Pause)
             {
                 MenuNavigation.Navigate(keyState, oldKeyState);
-                MenuNavigation.UpdateButtons(resumeBtn, optionsBtn, exitBtn);
+                MenuNavigation.Update(ref currentGameState, resumeBtn, optionsBtn, exitBtn);
             }
             else if (currentGameState == GameStateType.InGame)
             {
@@ -71,6 +71,10 @@
             else if (currentGameState == GameStateType.Defeat)
             {
                 ////TODO
+            }
+            else if (currentGameState == GameStateType.Quit)
+            {
+                Exit();
             }
 
             oldKeyState = keyState;
