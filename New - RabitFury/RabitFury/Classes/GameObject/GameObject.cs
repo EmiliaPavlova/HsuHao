@@ -6,7 +6,7 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
-    public abstract class GameObject : IAnimatable
+    public abstract class GameObject : IRenderable
     {
         public GameObject(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
         {

@@ -8,7 +8,7 @@ namespace RabitFury
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new StartUp.Engine())
                 game.Run();
         }
     }

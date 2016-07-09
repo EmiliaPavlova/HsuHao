@@ -6,7 +6,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using RabitFury.Interfaces;
 
-    public abstract class Collidable : GameObject, IAnimatable, ICollidable 
+    public abstract class Collidable : GameObject, IRenderable, ICollidable 
     {
         public Collidable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
             : base(setPos, setSize, setColor, setTexture) { }

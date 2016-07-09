@@ -3,7 +3,7 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
-    public interface IAnimatable
+    public interface IRenderable
     {
         Texture2D TheTexture { get; set; }
 

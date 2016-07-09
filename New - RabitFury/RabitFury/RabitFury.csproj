@@ -55,12 +55,14 @@
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
     <Compile Include="Constants\Global.cs" />
+    <Compile Include="StartUp\EngineDraw.cs" />
+    <Compile Include="StartUp\EngineUpdate.cs" />
     <Compile Include="Enums\ButtonStateType.cs" />
     <Compile Include="Enums\PlatformType.cs" />
     <Compile Include="Enums\GameStateType.cs" />
     <Compile Include="Extensions\MathExtensions.cs" />
-    <Compile Include="Game1.cs" />
-    <Compile Include="Interfaces\IAnimatable.cs" />
+    <Compile Include="StartUp\Engine.cs" />
+    <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\ICollectable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Program.cs" />
