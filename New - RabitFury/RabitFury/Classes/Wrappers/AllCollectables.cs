@@ -2,10 +2,13 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-    using GameObject;
+
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+
+    using GameObject;
     using Classes;
+
     public class AllCollectables
     {
         public AllCollectables(Texture2D[] collectable)
