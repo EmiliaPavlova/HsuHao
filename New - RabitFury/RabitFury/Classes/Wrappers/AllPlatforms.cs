@@ -6,6 +6,7 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using GameObject;
+    using Enums;
 
     public class AllPlatforms
     {
@@ -13,6 +14,8 @@
         {
             this.Rocks = MapGenerator.GeneratePlatform(texture);
         }
+
+        public bool HasBurned { get; set; }
 
         public List<Platform> Rocks { get; set; }
 
@@ -30,6 +33,7 @@
             {
                 if (r.IfCollide(point))
                 {
+                    if(r.MaterialID == PlatformType.Lava)
                     return true;
                 }
             }
