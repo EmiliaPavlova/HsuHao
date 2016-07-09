@@ -7,7 +7,7 @@
     using Classes;
     using Classes.Menu;
     using Enums;
-
+    using Classes.Wrappers;
     public partial class Engine : Game
     {
         private const float JumpPower = 0.010f;
@@ -51,9 +51,11 @@
         private Texture2D brickTexture;
         private Texture2D[] terrain;
         private Texture2D[] collectableTextures;
+        private Texture2D[] enemyTextures;
 
         private AllPlatforms allPlatforms;
         private AllCollectables allCollectables;
+        private AllEnemies allEnemies;
 
         public Engine()
         {
@@ -105,8 +107,12 @@
             collectableTextures[1] = Content.Load<Texture2D>("Collectables/lettuce");
             collectableTextures[2] = Content.Load<Texture2D>("Collectables/coin");
 
+            enemyTextures = new Texture2D[1];
+            enemyTextures[0] = Content.Load<Texture2D>("Spritesheets/JustNinja");
+
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);
+            allEnemies = new AllEnemies(enemyTextures);
 
             // Player set with size { X,Y} // aspect ratio is 3:5 //
             thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);

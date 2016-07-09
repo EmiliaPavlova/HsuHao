@@ -128,6 +128,26 @@
                     0.1f);
                 }
             }
+
+            //Enemies being drawn
+            foreach (Enemy p in allEnemies.ListEnemies)
+            {
+                if (p.TheTexture != null)
+                {
+                    spriteBatch.Draw(
+                        p.TheTexture,
+                        p.Position * Resolution.X,
+                        null,
+                        p.TheColor,
+                        0f,
+                        new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2),
+                        (p.Size.X * Resolution.X) / p.TheTexture.Width,
+                        SpriteEffects.None,
+                        0.1f);
+                }
+            }
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);
