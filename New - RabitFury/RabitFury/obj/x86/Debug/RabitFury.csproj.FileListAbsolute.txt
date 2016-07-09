@@ -257,3 +257,5 @@ C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x8
 C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.RawInput.xml
 C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\obj\x86\Debug\RabitFury.csprojResolveAssemblyReference.cache
+C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\Bunnies_right.png
+C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\RealBunnies.png

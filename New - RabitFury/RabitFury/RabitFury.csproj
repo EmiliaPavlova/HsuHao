@@ -56,6 +56,7 @@
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
     <Compile Include="Constants\Global.cs" />
+    <Compile Include="Interfaces\IAnimateable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="StartUp\EngineDraw.cs" />
@@ -106,6 +107,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\GUI\BG_Blur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Spritesheets\Bunnies_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Spritesheets\RealBunnies.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Textures\1.png">
@@ -184,7 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Constants\MenuConstants\" />
-    <Folder Include="Content\Spritesheets\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

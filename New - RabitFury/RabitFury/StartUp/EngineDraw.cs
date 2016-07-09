@@ -85,15 +85,15 @@
 
             //Player being drawn
             spriteBatch.Draw(
-                defaultTexture,
+                playerTexture,
                 thePlayer.Position * Resolution.X,
-                null,
-                new Color(105, 110, 255),
+                thePlayer.GetRectangle,
+                thePlayer.TheColor,
                 0f,
-                new Vector2(thePlayer.TheTexture.Width / 2,
-                thePlayer.TheTexture.Height / 2),
+                new Vector2(thePlayer.DefaktoSize.X / 2,
+                thePlayer.DefaktoSize.X / 2),
                 (thePlayer.Size.X * Resolution.X) / defaultTexture.Width,
-                SpriteEffects.None,
+                thePlayer.IsFlipped,
                 0.1f);
 
             //Players' collision points being drawn , they will always be 8
