@@ -3,7 +3,7 @@
 namespace RabitFury
 {
 #if WINDOWS || LINUX
-    public static class Program
+    public static class RabitFury
     {
         [STAThread]
         static void Main()

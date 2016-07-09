@@ -5,7 +5,6 @@
     using Microsoft.Xna.Framework.Input;
 
     using Classes;
-    using Classes.GameObject;
     using Classes.Menu;
     using Enums;
 
@@ -16,29 +15,6 @@
         private const float MaxVelocity = 0.004f;
 
         private static Vector2 Resolution = new Vector2(1024, 700);
-
-        private GameStateType currentGameState = GameStateType.InGame;
-
-        private GraphicsDeviceManager graphics;
-        private SpriteBatch spriteBatch;
-        private KeyboardState oldKeyState;
-
-        ////---Menu Items////
-        private MenuButton resumeBtn;
-        private MenuButton optionsBtn;
-        private MenuButton exitBtn;
-
-        private int btnCounter;
-        ////Menu Items---////
-
-        private Texture2D backgroundOverlay;
-        private Texture2D pauseBackground;
-        private Texture2D defaultTexture;
-        private Texture2D testPointTexture;
-        private Texture2D testBackground;
-        private Texture2D brickTexture;
-        private Texture2D[] terrain;
-        private Texture2D[] collectableTextures;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
         private Vector2[] backgrounds = new Vector2[7]
@@ -52,21 +28,31 @@
             new Vector2(6.445f, 0.28125f)
         };
 
-        private Vector2 velocity = new Vector2(0, 0);
+        private GameStateType currentGameState = GameStateType.InGame;
 
-        private AllPlatforms allPlatforms;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private KeyboardState oldKeyState;
 
-        private AllCollectables allCollectables;
+        ////---Menu Items////
+        private MenuButton resumeBtn;
+        private MenuButton optionsBtn;
+        private MenuButton exitBtn;
+        ////Menu Items---////
 
         private Player thePlayer;
 
-        public GraphicsDeviceManager GetGraphics
-        {
-            get
-            {
-                return this.graphics;
-            }
-        }
+        private Texture2D backgroundOverlay;
+        private Texture2D pauseBackground;
+        private Texture2D defaultTexture;
+        private Texture2D testPointTexture;
+        private Texture2D testBackground;
+        private Texture2D brickTexture;
+        private Texture2D[] terrain;
+        private Texture2D[] collectableTextures;
+
+        private AllPlatforms allPlatforms;
+        private AllCollectables allCollectables;
 
         public Engine()
         {
@@ -81,15 +67,12 @@
         protected override void Initialize()
         {
             ////---Menu Items////
-            btnCounter = 0;
-
             resumeBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight));
             optionsBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight));
             exitBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight));
             ////Menu Items---////
 
-            // Player set with size { X,Y} // aspect ratio is 3:5 //
-            thePlayer = new Player(new Vector2(0.045f, 0.075f));
+            
             base.Initialize();
         }
 
@@ -122,6 +105,9 @@
 
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);
+
+            // Player set with size { X,Y} // aspect ratio is 3:5 //
+            thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);
         }
 
         protected override void UnloadContent() { }

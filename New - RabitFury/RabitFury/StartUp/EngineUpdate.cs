@@ -4,7 +4,7 @@
     using Microsoft.Xna.Framework.Input;
 
     using Enums;
-
+    using Classes.Menu;
     public partial class Engine
     {
         protected override void Update(GameTime gameTime)
@@ -23,7 +23,7 @@
 
                 if (currentGameState == GameStateType.InGame)
                 {
-                    btnCounter = 0;
+                    MenuNavigation.Reset();
                     currentGameState = GameStateType.Pause;
                 }
                 else if (currentGameState == GameStateType.Pause)
@@ -38,73 +38,23 @@
             }
             else if (currentGameState == GameStateType.Pause)
             {
-                if (keyState.IsKeyDown(Keys.Down) && !oldKeyState.IsKeyDown(Keys.Down))
-                {
-                    btnCounter++;
-                }
-                else if (keyState.IsKeyDown(Keys.Up) && !oldKeyState.IsKeyDown(Keys.Up))
-                {
-                    btnCounter--;
-                }
+                MenuNavigation.Navigate(keyState, oldKeyState);
             }
             else if (currentGameState == GameStateType.InGame)
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    velocity.X = 0;
-                    if (velocity.Y < MaxVelocity)
-                    {
-                        velocity.Y += Gravity;
-                    }
-
-                    if (keyState.IsKeyDown(Keys.Right))
-                    {
-                        velocity.X = 0.003f;
-                    }
-
-                    if (keyState.IsKeyDown(Keys.Left))
-                    {
-                        velocity.X = -0.003f;
-                    }
-
-                    if (keyState.IsKeyDown(Keys.Up) &&
-                        !oldKeyState.IsKeyDown(Keys.Up) &&
-                        (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[3])))
-                    {
-                        velocity.Y = -JumpPower;
-                    }
-
                     // Platform Collision //
-                    if (allPlatforms.IfCollide(thePlayer.CollisionPoints[0]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[1]))
-                    {
-                        if (velocity.X > 0) velocity.X = 0;
-                    }
-                    else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[4]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[5]))
-                    {
-                        if (velocity.X < 0) velocity.X = 0;
-                    }
 
-                    if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
-                    {
-                        if (velocity.Y > 0) velocity.Y = 0;
-                    }
-                    else if (allPlatforms.IfCollide(thePlayer.CollisionPoints[6]) ||
-                        allPlatforms.IfCollide(thePlayer.CollisionPoints[7]))
-                    {
-                        if (velocity.Y < 0) velocity.Y = 0;
-                    }
+                    thePlayer.InteractWithWorld(allPlatforms,keyState,new float[] {JumpPower,Gravity,MaxVelocity});
 
                     for (int j = 0; j < backgrounds.Length; j++)
                     {
-                        backgrounds[j] -= velocity;
+                        backgrounds[j] -= thePlayer.Velocity;
                     }
 
-                    allPlatforms.Scroll(-velocity);
-                    allCollectables.Scroll(-velocity);
+                    allPlatforms.Scroll(-thePlayer.Velocity);
+                    allCollectables.Scroll(-thePlayer.Velocity);
                 }
             }
             else if (currentGameState == GameStateType.Victory)

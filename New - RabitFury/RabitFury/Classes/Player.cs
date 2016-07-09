@@ -1,41 +1,94 @@
 ﻿namespace RabitFury.Classes
 {
+    using GameObject;
     using Microsoft.Xna.Framework;
-
-    public class Player
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
+    public class Player : RigidBody
     {
-        private const float playerX = 0.5f; //Probably not subject to changing//
-        private const float playerY = 0.4f; //Might need to change//
-        private const float edgeShiftX = 0.37f; //Collsion snappynesss ,  0 to 0.5 , center to corner X //
-        private const float edgeShiftY = 0.4f; //Collsion snappynesss ,  0 to 0.5 , center to corner Y //
 
+        public Vector2 Position { get; set; }
         public Vector2 Size { get; private set; }
+        public Vector2 EdgeShifts { get; set; }
+        
 
         public Vector2[] CollisionPoints { get; private set; }
-
-        public Player(Vector2 setSize)
+        
+        
+        public Player(Vector2 setPos, Vector2 setSize, Vector2 setVelicty, Color setColor, Texture2D setTexture)
+            : base(setPos,setSize,setVelicty,setColor,setTexture)
         {
-            this.Size = setSize;
+            EdgeShifts = new Vector2(0.37f, 0.4f);
+
+            Position = setPos;
+            Size = setSize;
+            Velocity = setVelicty;
+            TheColor = setColor;
+            TheTexture = setTexture;
+
             this.CollisionPoints = new Vector2[8];
             //Right points//
-            CollisionPoints[0] = new Vector2(playerX + (setSize.X / 2), playerY - (setSize.Y * edgeShiftY)); //Right-Top Point//
-            CollisionPoints[1] = new Vector2(playerX + (setSize.X / 2), playerY + (setSize.Y * edgeShiftY)); //Right-Bottom Point//
+            CollisionPoints[0] = new Vector2(setPos.X + (setSize.X / 2), setPos.Y - (setSize.Y * EdgeShifts.Y)); //Right-Top Point//
+            CollisionPoints[1] = new Vector2(setPos.X + (setSize.X / 2), setPos.Y + (setSize.Y * EdgeShifts.Y)); //Right-Bottom Point//
             //Bottom points//
-            CollisionPoints[2] = new Vector2(playerX + (setSize.X * edgeShiftX), playerY + (setSize.Y / 2)); //Bottom-Right Point//
-            CollisionPoints[3] = new Vector2(playerX - (setSize.X * edgeShiftX), playerY + (setSize.Y / 2)); //Bottom-Right Point//
+            CollisionPoints[2] = new Vector2(setPos.X + (setSize.X * EdgeShifts.X), setPos.Y + (setSize.Y / 2)); //Bottom-Right Point//
+            CollisionPoints[3] = new Vector2(setPos.X - (setSize.X * EdgeShifts.X), setPos.Y + (setSize.Y / 2)); //Bottom-Right Point//
             //Left Points//
-            CollisionPoints[4] = new Vector2(playerX - (setSize.X / 2), playerY + (setSize.Y * edgeShiftY)); //Left-Bottom Point//
-            CollisionPoints[5] = new Vector2(playerX - (setSize.X / 2), playerY - (setSize.Y * edgeShiftY)); //Left-Top Point//
+            CollisionPoints[4] = new Vector2(setPos.X - (setSize.X / 2), setPos.Y + (setSize.Y * EdgeShifts.Y)); //Left-Bottom Point//
+            CollisionPoints[5] = new Vector2(setPos.X - (setSize.X / 2), setPos.Y - (setSize.Y * EdgeShifts.Y)); //Left-Top Point//
             //Top Points//
-            CollisionPoints[6] = new Vector2(playerX - (setSize.X * edgeShiftX), playerY - (setSize.Y / 2)); //Top-Left Point//
-            CollisionPoints[7] = new Vector2(playerX + (setSize.X * edgeShiftX), playerY - (setSize.Y / 2)); //Top-Right Point//
+            CollisionPoints[6] = new Vector2(setPos.X - (setSize.X * EdgeShifts.X), setPos.Y - (setSize.Y / 2)); //Top-Left Point//
+            CollisionPoints[7] = new Vector2(setPos.X + (setSize.X * EdgeShifts.X), setPos.Y - (setSize.Y / 2)); //Top-Right Point//
         }
+        
 
-        public static Vector2 Position
+        public void InteractWithWorld(AllPlatforms allPlatforms,KeyboardState keyState,float[] worldArgs)
         {
-            get
+            this.Velocity = new Vector2(0, this.Velocity.Y);
+            if (this.Velocity.Y < worldArgs[2]) //worldArgs[2] is MaxVelocity//
             {
-                return new Vector2(playerX, playerY);
+                this.Velocity = new Vector2(this.Velocity.X, this.Velocity.Y + worldArgs[1]); // worldArgs[1] is Gravity//
+            }
+
+            if (keyState.IsKeyDown(Keys.Right))
+            {
+                this.Velocity = new Vector2(0.003f, this.Velocity.Y);
+            }
+
+            if (keyState.IsKeyDown(Keys.Left))
+            {
+                this.Velocity = new Vector2(-0.003f, this.Velocity.Y);
+            }
+
+            if (keyState.IsKeyDown(Keys.Up) &&
+                (allPlatforms.IfCollide(this.CollisionPoints[2]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[3])))
+            {
+                this.Velocity = new Vector2(this.Velocity.X, -worldArgs[0]); //worldArgs[0] is JumpPower//
+            }
+
+
+
+            if (allPlatforms.IfCollide(this.CollisionPoints[0]) ||
+                        allPlatforms.IfCollide(this.CollisionPoints[1]))
+            {
+                if (this.Velocity.X > 0) this.Velocity = new Vector2(0, this.Velocity.Y);
+            }
+            else if (allPlatforms.IfCollide(this.CollisionPoints[4]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[5]))
+            {
+                if (this.Velocity.X < 0) this.Velocity = new Vector2(0, this.Velocity.Y);
+            }
+
+            if (allPlatforms.IfCollide(this.CollisionPoints[2]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[3]))
+            {
+                if (this.Velocity.Y > 0) this.Velocity = new Vector2(this.Velocity.X, 0);
+            }
+            else if (allPlatforms.IfCollide(this.CollisionPoints[6]) ||
+                allPlatforms.IfCollide(this.CollisionPoints[7]))
+            {
+                if (this.Velocity.Y < 0) this.Velocity = new Vector2(this.Velocity.X, 0);
             }
         }
     }

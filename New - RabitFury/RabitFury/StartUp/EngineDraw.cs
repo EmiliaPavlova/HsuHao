@@ -86,12 +86,12 @@
             //Player being drawn
             spriteBatch.Draw(
                 defaultTexture,
-                Player.Position * Resolution.X,
+                thePlayer.Position * Resolution.X,
                 null,
                 new Color(105, 110, 255),
                 0f,
-                new Vector2(defaultTexture.Width / 2,
-                defaultTexture.Height / 2),
+                new Vector2(thePlayer.TheTexture.Width / 2,
+                thePlayer.TheTexture.Height / 2),
                 (thePlayer.Size.X * Resolution.X) / defaultTexture.Width,
                 SpriteEffects.None,
                 0.1f);

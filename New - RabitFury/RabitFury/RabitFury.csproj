@@ -41,6 +41,7 @@
     <Compile Include="Classes\AllCollectables.cs" />
     <Compile Include="Classes\CollectableGenerator.cs" />
     <Compile Include="Classes\GameObject\Collectable.cs" />
+    <Compile Include="Classes\GameObject\RigidBody.cs" />
     <Compile Include="Classes\Menu\ButtonUtilities.cs" />
     <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
     <Compile Include="Classes\GameControls.cs" />
@@ -55,6 +56,8 @@
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
     <Compile Include="Constants\Global.cs" />
+    <Compile Include="Interfaces\ICollidable.cs" />
+    <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="StartUp\EngineDraw.cs" />
     <Compile Include="StartUp\EngineUpdate.cs" />
     <Compile Include="Enums\ButtonStateType.cs" />
@@ -64,8 +67,8 @@
     <Compile Include="StartUp\Engine.cs" />
     <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\ICollectable.cs" />
-    <Compile Include="Interfaces\ICollidable.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Interfaces\ICollided.cs" />
+    <Compile Include="RabitFury.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verification\Menu\MenuVerification.cs" />
   </ItemGroup>
