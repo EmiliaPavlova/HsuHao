@@ -6,6 +6,8 @@
     using System;
     using Enums;
     using Classes.Menu;
+    using Exceptions;
+
     public partial class Engine
     {
         protected override void Update(GameTime gameTime)
@@ -59,7 +61,7 @@
                     if(allPlatforms.HasBurned == true)
                     {
                         currentGameState = GameStateType.Defeat;
-                        throw new Exception("Zaeka uide u lavata");
+                        throw new EndGameException("Zaeka uide u lavata");
                     }
                 }
             }
