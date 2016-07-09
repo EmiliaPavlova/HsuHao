@@ -96,20 +96,20 @@
                 thePlayer.IsFlipped,
                 0.1f);
 
-            //Players' collision points being drawn , they will always be 8
-            for (int i = 0; i < thePlayer.CollisionPoints.Length; i++)
-            {
-                spriteBatch.Draw(
-                    testPointTexture,
-                    thePlayer.CollisionPoints[i] * Resolution.X,
-                    null,
-                    Color.Red,
-                    0f,
-                    new Vector2(2, 2),
-                    1f,
-                    SpriteEffects.None,
-                    0.1f);
-            }
+            ////Players' collision points being drawn , they will always be 8
+            //for (int i = 0; i < thePlayer.CollisionPoints.Length; i++)
+            //{
+            //    spriteBatch.Draw(
+            //        testPointTexture,
+            //        thePlayer.CollisionPoints[i] * Resolution.X,
+            //        null,
+            //        Color.Red,
+            //        0f,
+            //        new Vector2(2, 2),
+            //        1f,
+            //        SpriteEffects.None,
+            //        0.1f);
+            //}
 
             foreach (Collectable c in allCollectables.collectables)
             {

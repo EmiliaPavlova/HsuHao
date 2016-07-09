@@ -16,6 +16,8 @@
 
         private static Vector2 Resolution = new Vector2(1024, 700);
 
+        private GameStateType currentGameState = GameStateType.InGame;
+
         private Vector2 bgSize = new Vector2(1, 0.5625f);
         private Vector2[] backgrounds = new Vector2[7]
         {
@@ -27,8 +29,6 @@
             new Vector2(5.445f, 0.28125f),
             new Vector2(6.445f, 0.28125f)
         };
-
-        private GameStateType currentGameState = GameStateType.InGame;
 
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
@@ -70,11 +70,20 @@
         protected override void Initialize()
         {
             ////---Menu Items////
-            resumeBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight));
-            optionsBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight));
-            exitBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight));
-            ////Menu Items---////
+            resumeBtn = ButtonUtilities.GenerateButton(
+                Content, 
+                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight), 
+                ButtonActionType.Resume);
 
+            optionsBtn = ButtonUtilities.GenerateButton(
+                Content, 
+                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight), 
+                ButtonActionType.Options);
+
+            exitBtn = ButtonUtilities.GenerateButton(
+                Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight), 
+                ButtonActionType.Quit);
+            ////Menu Items---////
             
             base.Initialize();
         }

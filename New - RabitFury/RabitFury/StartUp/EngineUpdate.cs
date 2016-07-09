@@ -3,7 +3,6 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Input;
 
-    using System;
     using Enums;
     using Classes.Menu;
     using Exceptions;
@@ -39,11 +38,13 @@
             }
             else if (currentGameState == GameStateType.Pause)
             {
+                IsMouseVisible = true;
                 MenuNavigation.Navigate(keyState, oldKeyState);
-                MenuNavigation.UpdateButtons(resumeBtn, optionsBtn, exitBtn);
+                MenuNavigation.Update(ref currentGameState, resumeBtn, optionsBtn, exitBtn);
             }
             else if (currentGameState == GameStateType.InGame)
             {
+                IsMouseVisible = false;
                 for (int i = 0; i < 2; i++)
                 {
                     // Platform Collision //
@@ -72,6 +73,10 @@
             else if (currentGameState == GameStateType.Defeat)
             {
                 ////TODO
+            }
+            else if (currentGameState == GameStateType.Quit)
+            {
+                Exit();
             }
 
             oldKeyState = keyState;

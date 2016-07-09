@@ -61,6 +61,7 @@
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
     <Compile Include="Constants\Global.cs" />
     <Compile Include="Constants\MenuConstants.cs" />
+    <Compile Include="Enums\ButtonActionType.cs" />
     <Compile Include="Exceptions\EndGameException.cs" />
     <Compile Include="Interfaces\IAnimateable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />

@@ -6,6 +6,7 @@
         InGame,
         Pause,
         Victory,
-        Defeat
+        Defeat,
+        Quit
     }
 }
