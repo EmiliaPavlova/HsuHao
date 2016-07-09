@@ -55,7 +55,8 @@
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
-    <Compile Include="Constants\Global.cs" />
+    <Compile Include="Constants\GlobalConstants.cs" />
+    <Compile Include="Constants\MenuConstants.cs" />
     <Compile Include="Interfaces\IAnimateable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
@@ -193,7 +194,6 @@
     <Content Include="RabitFury.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Constants\MenuConstants\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
