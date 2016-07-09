@@ -261,3 +261,4 @@ C:\Users\Bobeto\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x8
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\carrot.png
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\Bunnies_right.png
 C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\RealBunnies.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\coin.png

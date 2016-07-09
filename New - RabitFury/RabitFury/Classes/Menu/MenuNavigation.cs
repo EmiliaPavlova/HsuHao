@@ -1,15 +1,20 @@
 ﻿namespace RabitFury.Classes.Menu
 {
     using Microsoft.Xna.Framework.Input;
-    using StartUp;
+
+    using Constants;
+    using Extensions;
+    using Enums;
 
     public static class MenuNavigation
     {
         private static int btnCounter;
+        private static int hoveredBtn;
 
         static MenuNavigation()
         {
-            btnCounter = 0;
+            btnCounter = MenuConstants.InitialButtonCounter;
+            hoveredBtn = MenuConstants.InitialSelectedButton;
         }
 
         public static void Navigate(KeyboardState keyState, KeyboardState oldKeyState)
@@ -18,15 +23,35 @@
             {
                 btnCounter++;
             }
-            else if (keyState.IsKeyDown(Keys.Down) && !oldKeyState.IsKeyDown(Keys.Down))
+            else if (keyState.IsKeyDown(Keys.Up) && !oldKeyState.IsKeyDown(Keys.Up))
             {
                 btnCounter--;
             }
         }
 
+        public static void UpdateButtons(params MenuButton[] menuButtons)
+        {
+            foreach (var menuBtn in menuButtons)
+            {
+                menuBtn.ButtonState = ButtonStateType.Normal;
+            }
+
+            hoveredBtn = MathExtensions.Module(btnCounter, menuButtons.Length);
+            menuButtons[hoveredBtn].ButtonState = ButtonStateType.Hovered;
+
+            foreach (var menuBtn in menuButtons)
+            {
+                if (menuBtn.ButtonState != ButtonStateType.Hovered)
+                {
+                    menuBtn.ButtonState = ButtonStateType.Normal;
+                }
+            }
+        }
+
         public static void Reset()
         {
-            btnCounter = 0;
+            btnCounter = MenuConstants.InitialButtonCounter;
+            hoveredBtn = MenuConstants.InitialSelectedButton;
         }
     }
 }
