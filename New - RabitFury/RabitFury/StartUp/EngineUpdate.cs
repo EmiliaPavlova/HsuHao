@@ -22,8 +22,6 @@
 
             if (keyState.IsKeyDown(Keys.P) && !oldKeyState.IsKeyDown(Keys.P))
             {
-                resumeBtn.ButtonState = ButtonStateType.Hovered; ////TODO
-
                 if (currentGameState == GameStateType.InGame)
                 {
                     MenuNavigation.Reset();
@@ -42,6 +40,7 @@
             else if (currentGameState == GameStateType.Pause)
             {
                 MenuNavigation.Navigate(keyState, oldKeyState);
+                MenuNavigation.UpdateButtons(resumeBtn, optionsBtn, exitBtn);
             }
             else if (currentGameState == GameStateType.InGame)
             {
