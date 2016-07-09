@@ -82,7 +82,6 @@
                 Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight), 
                 ButtonActionType.Quit);
             ////Menu Items---////
-
             
             base.Initialize();
         }

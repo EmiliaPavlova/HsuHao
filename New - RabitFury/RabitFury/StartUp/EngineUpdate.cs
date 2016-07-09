@@ -39,6 +39,7 @@
             }
             else if (currentGameState == GameStateType.Pause)
             {
+                IsMouseVisible = true;
                 MenuNavigation.Navigate(keyState, oldKeyState);
                 MenuNavigation.Update(ref currentGameState, resumeBtn, optionsBtn, exitBtn);
             }
