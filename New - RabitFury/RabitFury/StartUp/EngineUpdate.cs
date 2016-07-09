@@ -58,6 +58,7 @@
 
                     allPlatforms.Scroll(-thePlayer.Velocity);
                     allCollectables.Scroll(-thePlayer.Velocity);
+
                     if(allPlatforms.HasBurned == true)
                     {
                         currentGameState = GameStateType.Defeat;
