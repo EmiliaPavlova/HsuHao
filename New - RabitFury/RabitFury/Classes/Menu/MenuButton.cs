@@ -58,13 +58,13 @@
 
             set
             {
-                if (value < GlobalConstants.MinLayerDepth)
+                if (value < Global.MinLayerDepth)
                 {
-                    this.layerDepth = GlobalConstants.MinLayerDepth;
+                    this.layerDepth = Global.MinLayerDepth;
                 }
-                else if (value > GlobalConstants.MaxLayerDepth)
+                else if (value > Global.MaxLayerDepth)
                 {
-                    this.layerDepth = GlobalConstants.MaxLayerDepth;
+                    this.layerDepth = Global.MaxLayerDepth;
                 }
                 else
                 {
