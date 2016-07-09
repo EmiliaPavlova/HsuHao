@@ -197,3 +197,5 @@ C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Main_Menu_BG.png
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu_BG.png
 C:\Users\prot3ct\Documents\GitHub\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\BG_Blur.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\lettuce.png
+C:\Users\Ilian\Documents\Telerik\Telerik Projects\C# OOP\Hsu Hao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\carrot.jpg

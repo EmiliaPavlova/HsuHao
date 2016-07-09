@@ -6,7 +6,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using RabitFury.Interfaces;
 
-    public class BackgroundObject : NotCollidable, IAnimatable
+    public class BackgroundObject : NotCollidable, IRenderable
     {
         public BackgroundObject(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture) 
             : base(setPos, setSize, setColor, setTexture)
