@@ -4,7 +4,7 @@
     using Microsoft.Xna.Framework.Input;
 
     using Enums;
-
+    using Classes.Menu;
     public partial class Engine
     {
         protected override void Update(GameTime gameTime)
@@ -23,7 +23,7 @@
 
                 if (currentGameState == GameStateType.InGame)
                 {
-                    btnCounter = 0;
+                    MenuNavigation.Reset();
                     currentGameState = GameStateType.Pause;
                 }
                 else if (currentGameState == GameStateType.Pause)
@@ -38,14 +38,7 @@
             }
             else if (currentGameState == GameStateType.Pause)
             {
-                if (keyState.IsKeyDown(Keys.Down) && !oldKeyState.IsKeyDown(Keys.Down))
-                {
-                    btnCounter++;
-                }
-                else if (keyState.IsKeyDown(Keys.Up) && !oldKeyState.IsKeyDown(Keys.Up))
-                {
-                    btnCounter--;
-                }
+                MenuNavigation.Navigate(keyState, oldKeyState);
             }
             else if (currentGameState == GameStateType.InGame)
             {
