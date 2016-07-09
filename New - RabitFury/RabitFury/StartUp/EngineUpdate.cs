@@ -3,6 +3,7 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Input;
 
+    using System;
     using Enums;
     using Classes.Menu;
     public partial class Engine
@@ -55,6 +56,11 @@
 
                     allPlatforms.Scroll(-thePlayer.Velocity);
                     allCollectables.Scroll(-thePlayer.Velocity);
+                    if(allPlatforms.HasBurned == true)
+                    {
+                        currentGameState = GameStateType.Defeat;
+                        throw new Exception("Zaeka uide u lavata");
+                    }
                 }
             }
             else if (currentGameState == GameStateType.Victory)
