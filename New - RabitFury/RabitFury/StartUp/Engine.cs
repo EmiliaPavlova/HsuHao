@@ -45,6 +45,7 @@
         private Texture2D backgroundOverlay;
         private Texture2D pauseBackground;
         private Texture2D defaultTexture;
+        private Texture2D playerTexture;
         private Texture2D testPointTexture;
         private Texture2D testBackground;
         private Texture2D brickTexture;
@@ -87,6 +88,7 @@
 
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
+            playerTexture = Content.Load<Texture2D>("Spritesheets/RealBunnies");
 
             testBackground = Content.Load<Texture2D>("Textures/TheBG");
 
@@ -108,6 +110,7 @@
 
             // Player set with size { X,Y} // aspect ratio is 3:5 //
             thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);
+            thePlayer.DefaktoSize = new Vector2(190,175);
         }
 
         protected override void UnloadContent() { }

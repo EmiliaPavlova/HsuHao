@@ -40,7 +40,9 @@
   <ItemGroup>
     <Compile Include="Classes\AllCollectables.cs" />
     <Compile Include="Classes\CollectableGenerator.cs" />
-    <Compile Include="Classes\GameObject\Collectable.cs" />
+    <Compile Include="Classes\GameObject\Collectable.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Classes\GameObject\RigidBody.cs" />
     <Compile Include="Classes\Menu\ButtonUtilities.cs" />
     <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\Wrappers\AllPlatforms.cs" />
     <Compile Include="Constants\Global.cs" />
+    <Compile Include="Interfaces\IAnimateable.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="StartUp\EngineDraw.cs" />
@@ -84,6 +87,9 @@
     <Content Include="Content\Collectables\carrot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Collectables\coin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Collectables\lettuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -106,6 +112,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\GUI\BG_Blur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Spritesheets\Bunnies_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Spritesheets\RealBunnies.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Textures\1.png">
@@ -184,7 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Constants\MenuConstants\" />
-    <Folder Include="Content\Spritesheets\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
