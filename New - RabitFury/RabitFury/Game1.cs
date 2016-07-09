@@ -143,7 +143,8 @@
                     currentGameState = GameStateType.InGame;
                 }
             }
-            else if (currentGameState == GameStateType.MainMenu)
+
+            if (currentGameState == GameStateType.MainMenu)
             {
                 ////TODO
             }
@@ -190,6 +191,7 @@
                     {
                         if (velocity.X < 0) velocity.X = 0;
                     }
+
                     if (allPlatforms.IfCollide(thePlayer.CollisionPoints[2]) ||
                         allPlatforms.IfCollide(thePlayer.CollisionPoints[3]))
                     {
@@ -232,7 +234,9 @@
             if (currentGameState == GameStateType.Pause)
             {
                 ButtonUtilities.Draw(resumeBtn, spriteBatch, (int)resumeBtn.ButtonState);
+
                 ButtonUtilities.Draw(optionsBtn, spriteBatch, (int)optionsBtn.ButtonState);
+
                 ButtonUtilities.Draw(exitBtn, spriteBatch, (int)exitBtn.ButtonState);
 
                 spriteBatch.Draw(
