@@ -40,7 +40,9 @@
   <ItemGroup>
     <Compile Include="Classes\AllCollectables.cs" />
     <Compile Include="Classes\CollectableGenerator.cs" />
-    <Compile Include="Classes\GameObject\Collectable.cs" />
+    <Compile Include="Classes\GameObject\Collectable.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Classes\GameObject\RigidBody.cs" />
     <Compile Include="Classes\Menu\ButtonUtilities.cs" />
     <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
