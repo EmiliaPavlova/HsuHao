@@ -49,7 +49,7 @@
                 {
                     // Platform Collision //
 
-                    thePlayer.InteractWithWorld(allPlatforms,keyState,new float[] {JumpPower,Gravity,MaxVelocity});
+                    thePlayer.InteractWithWorld(allPlatforms,allCollectables,keyState,new float[] {JumpPower,Gravity,MaxVelocity});
 
                     for (int j = 0; j < backgrounds.Length; j++)
                     {
