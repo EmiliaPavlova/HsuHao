@@ -69,8 +69,6 @@
             return button;
         }
 
-
-
         public static void Load(ContentManager content)
         {
             foreach (var btn in buttons)
