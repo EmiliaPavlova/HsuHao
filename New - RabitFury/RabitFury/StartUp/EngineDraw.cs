@@ -92,22 +92,22 @@
                 0f,
                 new Vector2(thePlayer.DefaktoSize.X / 2,
                 thePlayer.DefaktoSize.X / 2),
-                (thePlayer.Size.X * Resolution.X) / defaultTexture.Width,
+                (thePlayer.Size.X * Resolution.X) / defaultTexture.Width * 0.9f, //Magic number 0.9 to fix size issues :)
                 thePlayer.IsFlipped,
                 0.1f);
 
-            ////Players' collision points being drawn , they will always be 8
-            //for (int i = 0; i < thePlayer.CollisionPoints.Length; i++)
+            ////players' collision points being drawn , they will always be 8
+            //for (int i = 0; i < theplayer.collisionpoints.length; i++)
             //{
-            //    spriteBatch.Draw(
-            //        testPointTexture,
-            //        thePlayer.CollisionPoints[i] * Resolution.X,
+            //    spritebatch.draw(
+            //        testpointtexture,
+            //        theplayer.collisionpoints[i] * resolution.x,
             //        null,
-            //        Color.Red,
+            //        color.red,
             //        0f,
-            //        new Vector2(2, 2),
+            //        new vector2(2, 2),
             //        1f,
-            //        SpriteEffects.None,
+            //        spriteeffects.none,
             //        0.1f);
             //}
 

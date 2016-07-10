@@ -125,7 +125,7 @@
 
             // Player set with size { X,Y} // aspect ratio is 3:5 //
             thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);
-            thePlayer.DefaktoSize = new Vector2(200,175);
+            thePlayer.DefaktoSize = new Vector2(200,172);
         }
 
         protected override void UnloadContent() { }
