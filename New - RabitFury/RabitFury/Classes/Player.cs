@@ -17,6 +17,8 @@
 
         public float CurrentFrame { get; set; }
 
+        public int Points { get; set; }
+
         public int GetFrame
         {
             get
@@ -47,6 +49,7 @@
             Velocity = setVelicty;
             TheColor = setColor;
             TheTexture = setTexture;
+            Points = 0;
 
             this.CollisionPoints = new Vector2[8];
             //Right points//
