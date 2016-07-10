@@ -26,9 +26,16 @@
             }
         }
 
-        public bool IfCollide(Vector2 point,Player thePlayer)
+        public void Collide(Vector2 point,Player thePlayer)
         {
-            return this.collectables.Cast<Collectable>().Any(r => r.HasCollide(point));
+            foreach (Collectable c in this.collectables)
+            {
+                if (c.HasCollide(point))
+                {
+                    thePlayer.Points += c.Collect();
+                }
+            }
+
         }
     }
 }

@@ -124,10 +124,10 @@
                 if (this.Velocity.Y < 0) this.Velocity = new Vector2(this.Velocity.X, 0);
             }
             //Collide with collectables
-            allCollectables.IfCollide(CollisionPoints[0],this); allCollectables.IfCollide(CollisionPoints[1], this);
-            allCollectables.IfCollide(CollisionPoints[2], this); allCollectables.IfCollide(CollisionPoints[3], this);
-            allCollectables.IfCollide(CollisionPoints[4], this); allCollectables.IfCollide(CollisionPoints[5], this);
-            allCollectables.IfCollide(CollisionPoints[6], this); allCollectables.IfCollide(CollisionPoints[7], this);
+            allCollectables.Collide(CollisionPoints[0],this); allCollectables.Collide(CollisionPoints[1], this);
+            allCollectables.Collide(CollisionPoints[2], this); allCollectables.Collide(CollisionPoints[3], this);
+            allCollectables.Collide(CollisionPoints[4], this); allCollectables.Collide(CollisionPoints[5], this);
+            allCollectables.Collide(CollisionPoints[6], this); allCollectables.Collide(CollisionPoints[7], this);
 
             //Control Animation:
             if (touchDown && (keyState.IsKeyDown(Keys.Right) || keyState.IsKeyDown(Keys.Left)))

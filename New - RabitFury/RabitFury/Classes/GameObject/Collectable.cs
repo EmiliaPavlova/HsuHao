@@ -6,12 +6,13 @@
 
     public class Collectable : GameObject, ICollectable
     {
+        private int ScoreValue;
         private bool hasCollide;
 
-        public Collectable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
+        public Collectable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture,int setScoreValue)
             : base(setPos, setSize, setColor, setTexture)
         {
-            this.hasCollide = false;
+            this.ScoreValue = setScoreValue;
         }
 
         public bool HasCollide(Vector2 thePoint)
@@ -26,12 +27,14 @@
             return false;
         }
 
-        public void Collect()
+        public int Collect()
         {
-            if (this.hasCollide)
+            if(TheTexture != null)
             {
-                return;
+                TheTexture = null;
+                return this.ScoreValue;
             }
+            return 0;
         }
     }
 }
