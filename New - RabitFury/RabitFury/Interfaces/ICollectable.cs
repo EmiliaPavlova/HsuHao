@@ -2,6 +2,6 @@
 {
     public interface ICollectable
     {
-        void AddPoints();
+        void Collect();
     }
 }

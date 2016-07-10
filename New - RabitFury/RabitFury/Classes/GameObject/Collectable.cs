@@ -26,9 +26,12 @@
             return false;
         }
 
-        public void AddPoints()
+        public void Collect()
         {
-            throw new System.NotImplementedException();
+            if (this.hasCollide)
+            {
+                return;
+            }
         }
     }
 }
