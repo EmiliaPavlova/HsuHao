@@ -1,13 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RabitFury.Classes.GameObject
+﻿namespace RabitFury.Classes.GameObject
 {
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+
     public class Enemy : RigidBody
     {
         public Enemy(Vector2 setPos, Vector2 setSize, Vector2 setVelicty, Color setColor, Texture2D setTexture)
@@ -31,7 +26,7 @@ namespace RabitFury.Classes.GameObject
         // TODO: clash with the enemy method
         // positiona e centyra. size x = width y = height
 
-        public bool IfCollide(Vector2 thePoint)
+        public override bool IfCollide(Vector2 thePoint)
         {
             if (thePoint.X >= Position.X - (Size.X / 2) && thePoint.X <= Position.X + (Size.X / 2) && thePoint.Y >= Position.Y - (Size.Y / 2) && thePoint.Y <= Position.Y + (Size.Y / 2))
             {
@@ -39,8 +34,5 @@ namespace RabitFury.Classes.GameObject
             }
             return false;
         }
-
-
-
     }
 }
