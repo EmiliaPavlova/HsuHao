@@ -96,20 +96,20 @@
                 thePlayer.IsFlipped,
                 0.1f);
 
-            //Players' collision points being drawn , they will always be 8
-            for (int i = 0; i < thePlayer.CollisionPoints.Length; i++)
-            {
-                spriteBatch.Draw(
-                    testPointTexture,
-                    thePlayer.CollisionPoints[i] * Resolution.X,
-                    null,
-                    Color.Red,
-                    0f,
-                    new Vector2(2, 2),
-                    1f,
-                    SpriteEffects.None,
-                    0.1f);
-            }
+            ////Players' collision points being drawn , they will always be 8
+            //for (int i = 0; i < thePlayer.CollisionPoints.Length; i++)
+            //{
+            //    spriteBatch.Draw(
+            //        testPointTexture,
+            //        thePlayer.CollisionPoints[i] * Resolution.X,
+            //        null,
+            //        Color.Red,
+            //        0f,
+            //        new Vector2(2, 2),
+            //        1f,
+            //        SpriteEffects.None,
+            //        0.1f);
+            //}
 
             foreach (Collectable c in allCollectables.collectables)
             {
@@ -128,6 +128,26 @@
                     0.1f);
                 }
             }
+
+            //Enemies being drawn
+            foreach (Enemy p in allEnemies.ListEnemies)
+            {
+                if (p.TheTexture != null)
+                {
+                    spriteBatch.Draw(
+                        p.TheTexture,
+                        p.Position * Resolution.X,
+                        null,
+                        p.TheColor,
+                        0f,
+                        new Vector2(p.TheTexture.Width / 2, p.TheTexture.Height / 2),
+                        (p.Size.X * Resolution.X) / p.TheTexture.Width,
+                        SpriteEffects.None,
+                        0.1f);
+                }
+            }
+
+
             spriteBatch.End();
 
             base.Draw(gameTime);

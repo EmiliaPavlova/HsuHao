@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RabitFury.Classes.CollectableGenerator" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CollectableGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.GameControls" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\GameControls.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.MapGenerator" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\MapGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.Player" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEAhAIAAARAAAAAAAAAQAAABAAAAAAAAAEgAAAAA=</HashCode>
+      <FileName>Classes\Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.AllBackgroundObjects" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Wrappers\AllBackgroundObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.AllCollectables" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Classes\Wrappers\AllCollectables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.AllPlatforms" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAIAAAAAAAAAIAAAgAAAAAAA=</HashCode>
+      <FileName>Classes\Wrappers\AllPlatforms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.BackgroundObject" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\BackgroundObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.Collectable" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAACAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\Collectable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.Collidable" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\Collidable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.Enemy" Collapsed="true">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.GameObject" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.NotCollidable" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\NotCollidable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.Platform" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\GameObject\Platform.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.GameObject.RigidBody" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAwACgAAAAAAAAAQAAAAAAAAAACAAEAAA=</HashCode>
+      <FileName>Classes\GameObject\RigidBody.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RabitFury.Classes.Menu.ButtonUtilities" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAgAAIAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Classes\Menu\ButtonUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.Menu.MenuButton" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAQAgAQEAAAEAAGAAAAAAIAAAACAAAAAAAAgAAA=</HashCode>
+      <FileName>Classes\Menu\MenuButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.Menu.MenuNavigation" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAgABAAAAAAAAAAAABAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Classes\Menu\MenuNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Classes.Wrappers.AllEnemies" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Classes\Wrappers\AllEnemies.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Constants.Global" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Constants\Global.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Constants.MenuConstants" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Constants\MenuConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Exceptions.EndGameException" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\EndGameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Extensions.MathExtensions" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Extensions\MathExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.StartUp.Engine" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAEEAABAAKC0BAEQAAAAAWAAAgBCggAIgAAQBQAAQ=</HashCode>
+      <FileName>StartUp\Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.Verification.Menu.MenuVerification" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Verification\Menu\MenuVerification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RabitFury.RabitFury" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>RabitFury.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="RabitFury.Interfaces.IAnimateable" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAABAAAAAAAAAQAAABAAAAAAAAAEgAAAAA=</HashCode>
+      <FileName>Interfaces\IAnimateable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RabitFury.Interfaces.ICollectable" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICollectable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RabitFury.Interfaces.ICollidable" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICollidable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RabitFury.Interfaces.ICollided" Collapsed="true">
+    <Position X="14" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICollided.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RabitFury.Interfaces.IMoveable" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Interfaces\IMoveable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RabitFury.Interfaces.IRenderable" Collapsed="true">
+    <Position X="2" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Interfaces\IRenderable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="RabitFury.Enums.ButtonStateType" Collapsed="true">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgAAAAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\ButtonStateType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RabitFury.Enums.GameStateType" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAAAAAAAAAAAAAAAQAAAACAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\GameStateType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RabitFury.Enums.PlatformType" Collapsed="true">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAgA=</HashCode>
+      <FileName>Enums\PlatformType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

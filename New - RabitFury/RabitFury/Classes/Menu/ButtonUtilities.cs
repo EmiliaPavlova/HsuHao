@@ -7,6 +7,7 @@
     using Microsoft.Xna.Framework.Graphics;
 
     using Verification.Menu;
+    using Enums;
 
     public static class ButtonUtilities
     {
@@ -17,9 +18,17 @@
             buttons = new List<MenuButton>();
         }
 
-        public static MenuButton GenerateButton(ContentManager content, Vector2 position)
+        public static MenuButton GenerateButton(
+            ContentManager content, 
+            Vector2 position, 
+            ButtonActionType buttonActionType)
         {
-            var resumeBtn = new MenuButton(
+            MenuButton button = null;
+
+            if (buttonActionType == ButtonActionType.Resume)
+            {
+                button = new MenuButton(
+                ButtonActionType.Resume,
                 position,
                 0.6f,     ////Scale
                 content,
@@ -28,10 +37,39 @@
                 "GUI/Btn_Hover",
                 "GUI/Btn_Clicked",
                 "GUI/Btn_Locked");
+            }
+            else if (buttonActionType == ButtonActionType.Options)
+            {
+                button = new MenuButton(
+                ButtonActionType.Options,
+                position,
+                0.6f,     ////Scale
+                content,
+                1f,       ////LayerDepth
+                "GUI/Btn_Normal",
+                "GUI/Btn_Hover",
+                "GUI/Btn_Clicked",
+                "GUI/Btn_Locked");
+            }
+            else if (buttonActionType == ButtonActionType.Quit)
+            {
+                button = new MenuButton(
+                ButtonActionType.Quit,
+                position,
+                0.6f,     ////Scale
+                content,
+                1f,       ////LayerDepth
+                "GUI/Btn_Normal",
+                "GUI/Btn_Hover",
+                "GUI/Btn_Clicked",
+                "GUI/Btn_Locked");
+            }
 
-            buttons.Add(resumeBtn);
-            return resumeBtn;
+            buttons.Add(button);
+            return button;
         }
+
+
 
         public static void Load(ContentManager content)
         {

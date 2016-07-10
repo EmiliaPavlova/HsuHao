@@ -7,7 +7,7 @@
     using Classes;
     using Classes.Menu;
     using Enums;
-
+    using Classes.Wrappers;
     public partial class Engine : Game
     {
         private const float JumpPower = 0.010f;
@@ -15,6 +15,8 @@
         private const float MaxVelocity = 0.004f;
 
         private static Vector2 Resolution = new Vector2(1024, 700);
+
+        private GameStateType currentGameState = GameStateType.InGame;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
         private Vector2[] backgrounds = new Vector2[7]
@@ -27,8 +29,6 @@
             new Vector2(5.445f, 0.28125f),
             new Vector2(6.445f, 0.28125f)
         };
-
-        private GameStateType currentGameState = GameStateType.InGame;
 
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
@@ -51,9 +51,11 @@
         private Texture2D brickTexture;
         private Texture2D[] terrain;
         private Texture2D[] collectableTextures;
+        private Texture2D[] enemyTextures;
 
         private AllPlatforms allPlatforms;
         private AllCollectables allCollectables;
+        private AllEnemies allEnemies;
 
         public Engine()
         {
@@ -68,11 +70,20 @@
         protected override void Initialize()
         {
             ////---Menu Items////
-            resumeBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight));
-            optionsBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight));
-            exitBtn = ButtonUtilities.GenerateButton(Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight));
-            ////Menu Items---////
+            resumeBtn = ButtonUtilities.GenerateButton(
+                Content, 
+                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight), 
+                ButtonActionType.Resume);
 
+            optionsBtn = ButtonUtilities.GenerateButton(
+                Content, 
+                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight), 
+                ButtonActionType.Options);
+
+            exitBtn = ButtonUtilities.GenerateButton(
+                Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight), 
+                ButtonActionType.Quit);
+            ////Menu Items---////
             
             base.Initialize();
         }
@@ -105,8 +116,12 @@
             collectableTextures[1] = Content.Load<Texture2D>("Collectables/lettuce");
             collectableTextures[2] = Content.Load<Texture2D>("Collectables/coin");
 
+            enemyTextures = new Texture2D[1];
+            enemyTextures[0] = Content.Load<Texture2D>("Spritesheets/JustNinja");
+
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);
+            allEnemies = new AllEnemies(enemyTextures);
 
             // Player set with size { X,Y} // aspect ratio is 3:5 //
             thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);

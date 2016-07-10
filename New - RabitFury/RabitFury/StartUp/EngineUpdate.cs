@@ -5,6 +5,8 @@
 
     using Enums;
     using Classes.Menu;
+    using Exceptions;
+
     public partial class Engine
     {
         protected override void Update(GameTime gameTime)
@@ -19,8 +21,6 @@
 
             if (keyState.IsKeyDown(Keys.P) && !oldKeyState.IsKeyDown(Keys.P))
             {
-                resumeBtn.ButtonState = ButtonStateType.Hovered; ////TODO
-
                 if (currentGameState == GameStateType.InGame)
                 {
                     MenuNavigation.Reset();
@@ -38,10 +38,13 @@
             }
             else if (currentGameState == GameStateType.Pause)
             {
+                IsMouseVisible = true;
                 MenuNavigation.Navigate(keyState, oldKeyState);
+                MenuNavigation.Update(ref currentGameState, resumeBtn, optionsBtn, exitBtn);
             }
             else if (currentGameState == GameStateType.InGame)
             {
+                IsMouseVisible = false;
                 for (int i = 0; i < 2; i++)
                 {
                     // Platform Collision //
@@ -55,6 +58,12 @@
 
                     allPlatforms.Scroll(-thePlayer.Velocity);
                     allCollectables.Scroll(-thePlayer.Velocity);
+                    allEnemies.Scroll(-thePlayer.Velocity);
+                    if(allPlatforms.HasBurned == true)
+                    {
+                        currentGameState = GameStateType.Defeat;
+                        throw new EndGameException("Zaeka uide u lavata");
+                    }
                 }
             }
             else if (currentGameState == GameStateType.Victory)
@@ -64,6 +73,10 @@
             else if (currentGameState == GameStateType.Defeat)
             {
                 ////TODO
+            }
+            else if (currentGameState == GameStateType.Quit)
+            {
+                Exit();
             }
 
             oldKeyState = keyState;
