@@ -75,6 +75,16 @@
 
         protected override void Initialize()
         {
+            backgrounds = new Vector2[7]
+        {
+            new Vector2(0.445f, 0.28125f),
+            new Vector2(1.445f, 0.28125f),
+            new Vector2(2.445f, 0.28125f),
+            new Vector2(3.445f, 0.28125f),
+            new Vector2(4.445f, 0.28125f),
+            new Vector2(5.445f, 0.28125f),
+            new Vector2(6.445f, 0.28125f)
+        };
             currentGameState = GameStateType.Intro;
             ////---Menu Items////
             resumeBtn = ButtonUtilities.GenerateButton(
