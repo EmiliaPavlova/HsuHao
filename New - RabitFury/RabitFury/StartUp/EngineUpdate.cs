@@ -72,9 +72,9 @@
                     if (allPlatforms.HasBurned == true)
                     {
                         currentGameState = GameStateType.Defeat;
-                        //throw new EndGameException("Zaeka uide u lavata");
-                        this.Initialize();
-                        this.LoadContent();
+                        throw new EndGameException("Zaeka uide u lavata");
+                        //this.Initialize();
+                        //this.LoadContent();
                     }
                 }
             }

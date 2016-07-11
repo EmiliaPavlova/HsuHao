@@ -38,12 +38,13 @@
     <ApplicationIcon>RabitFury.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\BackgroundGenerator.cs" />
     <Compile Include="Classes\CollectableGenerator.cs" />
     <Compile Include="Classes\GameObject\Collectable.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Classes\GameObject\Enemy.cs" />
-    <Compile Include="Classes\GameObject\RigidBody.cs" />
+    <Compile Include="Classes\Players\Enemy.cs" />
+    <Compile Include="Classes\Players\RigidBody.cs" />
     <Compile Include="Classes\Menu\ButtonUtilities.cs" />
     <Compile Include="Classes\Wrappers\AllBackgroundObjects.cs" />
     <Compile Include="Classes\GameControls.cs" />
@@ -54,7 +55,7 @@
     <Compile Include="Classes\Menu\MenuButton.cs" />
     <Compile Include="Classes\GameObject\Collidable.cs" />
     <Compile Include="Classes\Menu\MenuNavigation.cs" />
-    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Players\Player.cs" />
     <Compile Include="Classes\GameObject\Platform.cs" />
     <Compile Include="Classes\Wrappers\AllCollectables.cs" />
     <Compile Include="Classes\Wrappers\AllEnemies.cs" />
@@ -89,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\BackGroundTextures\Flaga.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\BackGroundTextures\OP_tree.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Collectables\carrot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -221,7 +228,7 @@
     <Content Include="Content\Textures\TestRect.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Textures\TheBG.png">
+    <Content Include="Content\BackGroundTextures\TheBG.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="RabitFury.ico" />

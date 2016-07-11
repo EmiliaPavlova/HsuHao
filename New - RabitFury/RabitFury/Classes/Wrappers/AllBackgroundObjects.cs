@@ -9,7 +9,7 @@
     {
         public AllBackgroundObjects(Texture2D[] texture)
         {
-            this.DynamicBackgroundObjects = MapGenerator.GenerateBackgroundObjects(texture);
+            this.DynamicBackgroundObjects = BackgroundGenerator.GenerateBackgroundObjects(texture);
         }
 
         public List<BackgroundObject> DynamicBackgroundObjects { get; private set; }

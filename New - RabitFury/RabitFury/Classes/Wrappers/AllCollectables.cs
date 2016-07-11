@@ -27,7 +27,7 @@
         {
             foreach (Collectable c in this.collectables)
             {
-                if (c.HasCollide(point))
+                if (c.IfCollide(point))
                 {
                     thePlayer.Points += c.Collect();
                 }

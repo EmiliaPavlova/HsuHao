@@ -1,5 +1,6 @@
 ﻿namespace RabitFury.Classes
 {
+    using System;
     using System.Collections.Generic;
     using Enums;
     using GameObject;
@@ -78,18 +79,6 @@
             tempList.Add(new Platform(new Vector2(0.00f, 0.75f), new Vector2(100f, 0.1f), Color.White, null, PlatformType.Dirt));
 
             return tempList;
-        }
-
-        public static List<BackgroundObject> GenerateBackgroundObjects(Texture2D[] theTexture)
-        {
-            List<BackgroundObject> newList = new List<BackgroundObject>();
-
-            //TODO: write the logic
-            //newList.Add(new BackgroundObject(new Vector2(), new Vector2(), Color.Aqua, theTexture[]));
-
-
-
-            return newList;
         }
     }
 }

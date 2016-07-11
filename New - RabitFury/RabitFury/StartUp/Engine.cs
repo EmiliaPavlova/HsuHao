@@ -51,7 +51,6 @@
         private Texture2D defaultTexture;
         private Texture2D playerTexture;
         private Texture2D testPointTexture;
-        private Texture2D testBackground;
         private Texture2D brickTexture;
         private Texture2D[] terrain;
         private Texture2D[] collectableTextures;
@@ -119,8 +118,6 @@
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");
             playerTexture = Content.Load<Texture2D>("Spritesheets/RealBunnies");
 
-            testBackground = Content.Load<Texture2D>("Textures/TheBG");
-
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
 
             terrain = new Texture2D[19];
@@ -138,8 +135,10 @@
             enemyTextures = new Texture2D[1];
             enemyTextures[0] = Content.Load<Texture2D>("Spritesheets/JustNinja");
 
-            backgroundTextures = new Texture2D[1];
-            backgroundTextures[0] = testBackground;
+            backgroundTextures = new Texture2D[3];
+            backgroundTextures[0] = Content.Load<Texture2D>("BackGroundTextures/TheBG");
+            backgroundTextures[1] = Content.Load<Texture2D>("BackGroundTextures/OP_tree");
+            backgroundTextures[2] = Content.Load<Texture2D>("BackGroundTextures/Flaga");
 
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);

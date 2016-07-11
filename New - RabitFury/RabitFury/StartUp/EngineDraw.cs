@@ -62,34 +62,17 @@
                     SpriteEffects.None,
                     0.9f);
             }
-
-            //Background is being drawn here: 
-            foreach (var background in backgrounds)
+            for (int i = 0; i < allBackgroundObjects.DynamicBackgroundObjects.Count; i++)
             {
                 spriteBatch.Draw(
-                testBackground,
-                background * Resolution.X,
+                allBackgroundObjects.DynamicBackgroundObjects[i].TheTexture,
+                allBackgroundObjects.DynamicBackgroundObjects[i].Position * Resolution.X,
                 null,
                 Color.White,
                 0f,
-                new Vector2(testBackground.Width / 2,
-                testBackground.Height / 2),
-                (bgSize.X * Resolution.X) / testBackground.Width,
-                SpriteEffects.None,
-                0f);
-            }
-
-            foreach(BackgroundObject bg in allBackgroundObjects.DynamicBackgroundObjects)
-            {
-                spriteBatch.Draw(
-                testBackground,
-                bg.Position * Resolution.X,
-                null,
-                Color.White,
-                0f,
-                new Vector2(bg.TheTexture.Width / 2,
-                bg.TheTexture.Height / 2),
-                (bg.Size.X * Resolution.X) / bg.TheTexture.Width,
+                new Vector2(allBackgroundObjects.DynamicBackgroundObjects[i].TheTexture.Width / 2,
+                allBackgroundObjects.DynamicBackgroundObjects[i].TheTexture.Height / 2),
+                (allBackgroundObjects.DynamicBackgroundObjects[i].Size.X * Resolution.X) / allBackgroundObjects.DynamicBackgroundObjects[i].TheTexture.Width,
                 SpriteEffects.None,
                 0f);
             }
