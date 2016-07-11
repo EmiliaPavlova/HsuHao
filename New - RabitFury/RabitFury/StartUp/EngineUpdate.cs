@@ -67,11 +67,14 @@
                     allPlatforms.Scroll(-thePlayer.Velocity);
                     allCollectables.Scroll(-thePlayer.Velocity);
                     allEnemies.Scroll(-thePlayer.Velocity);
+                    allBackgroundObjects.Scroll(-thePlayer.Velocity);
 
                     if (allPlatforms.HasBurned == true)
                     {
                         currentGameState = GameStateType.Defeat;
-                        throw new EndGameException("Zaeka uide u lavata");
+                        //throw new EndGameException("Zaeka uide u lavata");
+                        this.Initialize();
+                        this.LoadContent();
                     }
                 }
             }

@@ -481,12 +481,6 @@ C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x8
 C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\carrot.png
 C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\coin.png
 C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Collectables\lettuce.png
-C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Clicked.png
-C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Hover.png
-C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Locked.png
-C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Btn_Normal.png
-C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Main_Menu_BG.png
-C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu_BG.png
 C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\BG_Blur.png
 C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\Bunnies_right.png
 C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\Spritesheets\JustNinja.png
@@ -600,3 +594,17 @@ E:\Telerik Academy\C# OOP\Team Work\HsuHao\New - RabitFury\RabitFury\bin\Windows
 E:\Telerik Academy\C# OOP\Team Work\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ResumeBtn\Btn_Locked_Resume.png
 E:\Telerik Academy\C# OOP\Team Work\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ResumeBtn\Btn_Normal_Resume.png
 E:\Telerik Academy\C# OOP\Team Work\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\Menu_BG.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Intro_BG.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ExitBtn\Btn_Clicked_Exit.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ExitBtn\Btn_Hover_Exit.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ExitBtn\Btn_Locked_Exit.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ExitBtn\Btn_Normal_Exit.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\OptionsBtn\Btn_Clicked_Options.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\OptionsBtn\Btn_Hover_Options.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\OptionsBtn\Btn_Locked_Options.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\OptionsBtn\Btn_Normal_Options.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ResumeBtn\Btn_Clicked_Resume.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ResumeBtn\Btn_Hover_Resume.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ResumeBtn\Btn_Locked_Resume.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\ResumeBtn\Btn_Normal_Resume.png
+C:\Users\Bobeto\Desktop\GitoveWe\HsuHao\New - RabitFury\RabitFury\bin\Windows\x86\Debug\Content\GUI\Menu\Menu_BG.png

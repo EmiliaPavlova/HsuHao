@@ -79,6 +79,21 @@
                 0f);
             }
 
+            foreach(BackgroundObject bg in allBackgroundObjects.DynamicBackgroundObjects)
+            {
+                spriteBatch.Draw(
+                testBackground,
+                bg.Position * Resolution.X,
+                null,
+                Color.White,
+                0f,
+                new Vector2(bg.TheTexture.Width / 2,
+                bg.TheTexture.Height / 2),
+                (bg.Size.X * Resolution.X) / bg.TheTexture.Width,
+                SpriteEffects.None,
+                0f);
+            }
+
             //The platform is being drawn
             foreach (Platform p in allPlatforms.Rocks)
             {

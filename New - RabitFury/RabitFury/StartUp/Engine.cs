@@ -56,10 +56,12 @@
         private Texture2D[] terrain;
         private Texture2D[] collectableTextures;
         private Texture2D[] enemyTextures;
+        private Texture2D[] backgroundTextures;
 
         private AllPlatforms allPlatforms;
         private AllCollectables allCollectables;
         private AllEnemies allEnemies;
+        private AllBackgroundObjects allBackgroundObjects;
 
         public Engine()
         {
@@ -73,6 +75,7 @@
 
         protected override void Initialize()
         {
+            currentGameState = GameStateType.Intro;
             ////---Menu Items////
             resumeBtn = ButtonUtilities.GenerateButton(
                 Content,
@@ -125,9 +128,13 @@
             enemyTextures = new Texture2D[1];
             enemyTextures[0] = Content.Load<Texture2D>("Spritesheets/JustNinja");
 
+            backgroundTextures = new Texture2D[1];
+            backgroundTextures[0] = testBackground;
+
             allPlatforms = new AllPlatforms(terrain);
             allCollectables = new AllCollectables(collectableTextures);
             allEnemies = new AllEnemies(enemyTextures);
+            allBackgroundObjects = new AllBackgroundObjects(backgroundTextures);
 
             // Player set with size { X,Y} // aspect ratio is 3:5 //
             thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0), Color.White, defaultTexture);
