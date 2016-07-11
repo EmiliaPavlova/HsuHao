@@ -9,7 +9,7 @@
         private int ScoreValue;
         private bool hasCollide;
 
-        public Collectable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture,int setScoreValue)
+        public Collectable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture, int setScoreValue)
             : base(setPos, setSize, setColor, setTexture)
         {
             this.ScoreValue = setScoreValue;
@@ -24,14 +24,16 @@
             {
                 return true;
             }
+
             return false;
         }
 
         public int Collect()
         {
-            if(TheTexture != null)
+            if (TheTexture != null)
             {
                 TheTexture = null;
+
                 return this.ScoreValue;
             }
 

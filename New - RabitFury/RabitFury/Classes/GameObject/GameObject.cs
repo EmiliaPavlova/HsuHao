@@ -1,6 +1,5 @@
 ﻿namespace RabitFury.Classes.GameObject
 {
-    using System;
 
     using Interfaces;
     using Microsoft.Xna.Framework;

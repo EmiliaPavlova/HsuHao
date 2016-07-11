@@ -1,5 +1,4 @@
-﻿
-namespace RabitFury.Classes.GameObject
+﻿namespace RabitFury.Classes.GameObject
 {
     using Interfaces;
     using Microsoft.Xna.Framework;

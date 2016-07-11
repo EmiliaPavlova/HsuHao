@@ -85,6 +85,7 @@
             List<BackgroundObject> newList = new List<BackgroundObject>();
 
             //TODO: write the logic
+            //newList.Add(new BackgroundObject(new Vector2(), new Vector2(), Color.Aqua, theTexture[]));
 
             return newList;
         }

@@ -1,13 +1,25 @@
 ﻿namespace RabitFury.Classes
 {
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using GameObject;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
 
     public class AllBackgroundObjects
     {
-        // TO DO
+        public AllBackgroundObjects(Texture2D[] texture)
+        {
+            this.DynamicBackgroundObjects = MapGenerator.GenerateBackgroundObjects(texture);
+        }
+
+        public List<BackgroundObject> DynamicBackgroundObjects { get; private set; }
+
+        public void Scroll(Vector2 theOffSet)
+        {
+            for (int index = 0; index < DynamicBackgroundObjects.Count; index++)
+            {
+                DynamicBackgroundObjects[index].Scroll(theOffSet);
+            }
+        }
     }
 }
