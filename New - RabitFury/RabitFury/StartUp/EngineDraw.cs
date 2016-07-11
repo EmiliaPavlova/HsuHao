@@ -15,6 +15,21 @@
 
             spriteBatch.Begin(SpriteSortMode.FrontToBack);
 
+            if (currentGameState == GameStateType.Intro)
+            {
+                //Draw intro BG
+                spriteBatch.Draw(
+                    introBackground,
+                    Vector2.Zero,
+                    null,
+                    Color.White,
+                    0f,
+                    Vector2.Zero,
+                    1f,
+                    SpriteEffects.None,
+                    1.0f);
+            }
+
             if (currentGameState == GameStateType.Pause)
             {
                 ButtonUtilities.Draw(resumeBtn, spriteBatch, (int)resumeBtn.ButtonState);

@@ -2,6 +2,7 @@
 {
     public enum GameStateType
     {
+        Intro,
         MainMenu,
         InGame,
         Pause,

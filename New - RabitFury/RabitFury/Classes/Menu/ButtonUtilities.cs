@@ -31,10 +31,10 @@
                 0.6f,     ////Scale
                 content,
                 1f,       ////LayerDepth
-                "GUI/Btn_Normal",
-                "GUI/Btn_Hover",
-                "GUI/Btn_Clicked",
-                "GUI/Btn_Locked");
+                "GUI/Menu/ResumeBtn/Btn_Normal_Resume",
+                "GUI/Menu/ResumeBtn/Btn_Hover_Resume",
+                "GUI/Menu/ResumeBtn/Btn_Clicked_Resume",
+                "GUI/Menu/ResumeBtn/Btn_Locked_Resume");
             }
             else if (buttonActionType == ButtonActionType.Options)
             {
@@ -44,10 +44,10 @@
                 0.6f,     //Scale
                 content,
                 1f,       //LayerDepth
-                "GUI/Btn_Normal",
-                "GUI/Btn_Hover",
-                "GUI/Btn_Clicked",
-                "GUI/Btn_Locked");
+                "GUI/Menu/OptionsBtn/Btn_Normal_Options",
+                "GUI/Menu/OptionsBtn/Btn_Hover_Options",
+                "GUI/Menu/OptionsBtn/Btn_Clicked_Options",
+                "GUI/Menu/OptionsBtn/Btn_Locked_Options");
             }
             else if (buttonActionType == ButtonActionType.Quit)
             {
@@ -57,10 +57,10 @@
                 0.6f,     //Scale
                 content,
                 1f,       //LayerDepth
-                "GUI/Btn_Normal",
-                "GUI/Btn_Hover",
-                "GUI/Btn_Clicked",
-                "GUI/Btn_Locked");
+                "GUI/Menu/ExitBtn/Btn_Normal_Exit",
+                "GUI/Menu/ExitBtn/Btn_Hover_Exit",
+                "GUI/Menu/ExitBtn/Btn_Clicked_Exit",
+                "GUI/Menu/ExitBtn/Btn_Locked_Exit");
             }
 
             buttons.Add(button);

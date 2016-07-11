@@ -98,25 +98,49 @@
     <Content Include="Content\Collectables\lettuce.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\GUI\Btn_Clicked.png">
+    <Content Include="Content\GUI\Intro_BG.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\GUI\Btn_Hover.png">
+    <Content Include="Content\GUI\Menu\ExitBtn\Btn_Clicked_Exit.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\GUI\Btn_Locked.png">
+    <Content Include="Content\GUI\Menu\ExitBtn\Btn_Hover_Exit.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\GUI\Btn_Normal.png">
+    <Content Include="Content\GUI\Menu\ExitBtn\Btn_Locked_Exit.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\GUI\Main_Menu_BG.png">
+    <Content Include="Content\GUI\Menu\ExitBtn\Btn_Normal_Exit.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\GUI\Menu_BG.png">
+    <Content Include="Content\GUI\Menu\OptionsBtn\Btn_Clicked_Options.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\OptionsBtn\Btn_Hover_Options.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\OptionsBtn\Btn_Locked_Options.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\OptionsBtn\Btn_Normal_Options.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\ResumeBtn\Btn_Clicked_Resume.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\ResumeBtn\Btn_Hover_Resume.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\ResumeBtn\Btn_Locked_Resume.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\ResumeBtn\Btn_Normal_Resume.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\GUI\BG_Blur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GUI\Menu\Menu_BG.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Spritesheets\Bunnies_right.png">

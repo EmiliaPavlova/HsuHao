@@ -8,6 +8,7 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
+
     public partial class Engine : Game
     {
         private const float JumpPower = 0.010f;
@@ -16,7 +17,7 @@
 
         private static Vector2 Resolution = new Vector2(1024, 700);
 
-        private GameStateType currentGameState = GameStateType.InGame;
+        private GameStateType currentGameState = GameStateType.Intro;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
 
@@ -30,6 +31,8 @@
             new Vector2(5.445f, 0.28125f),
             new Vector2(6.445f, 0.28125f)
         };
+
+        private Texture2D introBackground;
 
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
@@ -95,8 +98,9 @@
 
             ButtonUtilities.Load(Content);
 
-            pauseBackground = Content.Load<Texture2D>("GUI/Menu_BG");
+            introBackground = Content.Load<Texture2D>("GUI/Intro_BG");
             backgroundOverlay = Content.Load<Texture2D>("GUI/BG_Blur");
+            pauseBackground = Content.Load<Texture2D>("GUI/Menu/Menu_BG");
 
             defaultTexture = Content.Load<Texture2D>("Textures/TestRect");
             testPointTexture = Content.Load<Texture2D>("Textures/TestPoint");

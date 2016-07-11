@@ -32,7 +32,14 @@
                 }
             }
 
-            if (currentGameState == GameStateType.MainMenu)
+            if (currentGameState == GameStateType.Intro)
+            {
+                if (keyState.IsKeyDown(Keys.Space))
+                {
+                    currentGameState = GameStateType.InGame;
+                }
+            }
+            else if (currentGameState == GameStateType.MainMenu)
             {
                 ////TODO
             }
