@@ -5,12 +5,12 @@
 
     public interface IRenderable
     {
-        Texture2D TheTexture { get; set; }
+        Texture2D TheTexture { get; }
 
-        Vector2 Position { get; set; }
+        Vector2 Position { get; }
 
-        Color TheColor { get; set; }
+        Color TheColor { get; }
 
-        Vector2 Size { get; set; }
+        Vector2 Size { get; }
     }
 }

@@ -7,15 +7,15 @@
     using Microsoft.Xna.Framework.Input;
     public class Player : RigidBody, IAnimateable
     {
-        public Vector2 EdgeShifts { get; set; }
+        public Vector2 EdgeShifts { get; private set; }
 
-        public Rectangle ViewRect { get; set; }
+        public Rectangle ViewRect { get; private set; }
 
-        public SpriteEffects IsFlipped { get; set; }
+        public SpriteEffects IsFlipped { get; private set; }
 
         public Vector2 DefaktoSize { get; set; }
 
-        public float CurrentFrame { get; set; }
+        public float CurrentFrame { get; private set; }
 
         public int Points { get; set; }
 

@@ -3,12 +3,16 @@
     using Microsoft.Xna.Framework;
     public interface IAnimateable : IRenderable
     {
-        Rectangle ViewRect { get; set; }
-        Vector2 DefaktoSize { get; set; }
-        float CurrentFrame { get; set; }
-        int ActionIndex { get; set; }
+        Rectangle ViewRect { get; }
+
+        Vector2 DefaktoSize { get; }
+
+        float CurrentFrame { get; }
+
+        int ActionIndex { get; }
 
         void Animate();
+
         void Reset(bool touchDown);
     }
 }

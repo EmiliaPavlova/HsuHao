@@ -13,6 +13,6 @@
             this.MaterialID = material;
         }
 
-        public PlatformType MaterialID { get; set; }
+        public PlatformType MaterialID { get; private set; }
     }
 }

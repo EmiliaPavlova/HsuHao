@@ -13,7 +13,7 @@
             this.collectables = CollectableGenerator.GenerateCollectable(collectable);
         }
 
-        public List<Collectable> collectables = new List<Collectable>();
+        public List<Collectable> collectables { get; private set; } = new List<Collectable>();
 
         public void Scroll(Vector2 theOffSet)
         {

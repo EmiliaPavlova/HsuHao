@@ -6,13 +6,15 @@
 
     public class Collectable : Collidable, ICollectable
     {
-        private int ScoreValue;
+        
 
         public Collectable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture, int setScoreValue)
             : base(setPos, setSize, setColor, setTexture)
         {
             this.ScoreValue = setScoreValue;
         }
+
+        public int ScoreValue { get; private set; }
 
         public int Collect()
         {

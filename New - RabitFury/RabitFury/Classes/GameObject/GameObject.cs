@@ -15,13 +15,13 @@
             this.TheTexture = setTexture;
         }
 
-        public Vector2 Position { get; set; }
+        public Vector2 Position { get; private set; }
 
-        public Vector2 Size { get; set; }
+        public Vector2 Size { get; private set; }
 
-        public Color TheColor { get; set; }
+        public Color TheColor { get; private set; }
 
-        public Texture2D TheTexture { get; set; }
+        public Texture2D TheTexture { get; protected set; }
 
         public void Scroll(Vector2 alter)
         {

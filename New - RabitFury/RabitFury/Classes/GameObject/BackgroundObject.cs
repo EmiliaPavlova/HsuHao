@@ -14,7 +14,7 @@
             this.BackgroundCollection = new List<BackgroundObject>();
         }
 
-        public List<BackgroundObject> BackgroundCollection { get; set; }
+        public List<BackgroundObject> BackgroundCollection { get; private set; }
     }
 }
 

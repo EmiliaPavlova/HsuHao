@@ -13,9 +13,9 @@
             this.Rocks = MapGenerator.GeneratePlatform(texture);
         }
 
-        public List<Platform> Rocks { get; set; }
+        public List<Platform> Rocks { get; private set; }
 
-        public bool HasBurned { get; set; }
+        public bool HasBurned { get; private set; }
 
         public void Scroll(Vector2 theOffSet)
         {
