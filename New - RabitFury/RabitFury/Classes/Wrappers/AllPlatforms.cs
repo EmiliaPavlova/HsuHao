@@ -1,12 +1,10 @@
 ﻿namespace RabitFury.Classes
 {
-    using System;
     using System.Collections.Generic;
-
+    using Enums;
+    using GameObject;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-    using GameObject;
-    using Enums;
 
     public class AllPlatforms
     {
@@ -33,13 +31,15 @@
             {
                 if (r.IfCollide(point))
                 {
-                    if(r.MaterialID == PlatformType.Lava)
+                    if (r.MaterialID == PlatformType.Lava)
                     {
                         HasBurned = true;
                     }
+
                     return true;
                 }
             }
+
             return false;
         }
     }

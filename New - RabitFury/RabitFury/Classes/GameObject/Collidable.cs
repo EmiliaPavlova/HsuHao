@@ -1,15 +1,16 @@
 ﻿namespace RabitFury.Classes.GameObject
 {
-    using System;
 
+    using global::RabitFury.Interfaces;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-    using global::RabitFury.Interfaces;
 
-    public abstract class Collidable : GameObject, IRenderable, ICollided 
+    public abstract class Collidable : GameObject, IRenderable, ICollided
     {
         public Collidable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
-            : base(setPos, setSize, setColor, setTexture) { }
+            : base(setPos, setSize, setColor, setTexture)
+        {
+        }
 
         public bool IfCollide(Vector2 thePoint)
         {
@@ -17,6 +18,7 @@
             {
                 return true;
             }
+
             return false;
         }
     }

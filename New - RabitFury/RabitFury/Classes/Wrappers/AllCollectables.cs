@@ -1,13 +1,10 @@
 ﻿namespace RabitFury.Classes
 {
     using System.Collections.Generic;
-    using System.Linq;
-
-    using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
 
     using GameObject;
-    using Classes;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
 
     public class AllCollectables
     {
@@ -26,7 +23,7 @@
             }
         }
 
-        public void Collide(Vector2 point,Player thePlayer)
+        public void Collide(Vector2 point, Player thePlayer)
         {
             foreach (Collectable c in this.collectables)
             {

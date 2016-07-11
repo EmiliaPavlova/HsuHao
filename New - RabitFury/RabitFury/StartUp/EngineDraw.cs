@@ -1,12 +1,11 @@
 ﻿namespace RabitFury.StartUp
 {
-    using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
-
-    using Classes;
     using Classes.GameObject;
     using Classes.Menu;
     using Enums;
+
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
 
     public partial class Engine
     {

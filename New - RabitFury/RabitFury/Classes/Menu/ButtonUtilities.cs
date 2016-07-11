@@ -1,13 +1,11 @@
 ﻿namespace RabitFury.Classes.Menu
 {
     using System.Collections.Generic;
-
+    using Enums;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;
-
     using Verification.Menu;
-    using Enums;
 
     public static class ButtonUtilities
     {
@@ -19,8 +17,8 @@
         }
 
         public static MenuButton GenerateButton(
-            ContentManager content, 
-            Vector2 position, 
+            ContentManager content,
+            Vector2 position,
             ButtonActionType buttonActionType)
         {
             MenuButton button = null;
@@ -43,9 +41,9 @@
                 button = new MenuButton(
                 ButtonActionType.Options,
                 position,
-                0.6f,     ////Scale
+                0.6f,     //Scale
                 content,
-                1f,       ////LayerDepth
+                1f,       //LayerDepth
                 "GUI/Btn_Normal",
                 "GUI/Btn_Hover",
                 "GUI/Btn_Clicked",
@@ -56,9 +54,9 @@
                 button = new MenuButton(
                 ButtonActionType.Quit,
                 position,
-                0.6f,     ////Scale
+                0.6f,     //Scale
                 content,
-                1f,       ////LayerDepth
+                1f,       //LayerDepth
                 "GUI/Btn_Normal",
                 "GUI/Btn_Hover",
                 "GUI/Btn_Clicked",
@@ -74,6 +72,7 @@
             foreach (var btn in buttons)
             {
                 var btnStatesDirs = btn.ButtonStatesDirectory;
+
                 for (int i = 0; i < btnStatesDirs.Length; i++)
                 {
                     content.Load<Texture2D>(btnStatesDirs[i]);

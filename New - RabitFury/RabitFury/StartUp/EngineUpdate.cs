@@ -1,11 +1,11 @@
 ﻿namespace RabitFury.StartUp
 {
+    using Classes.Menu;
+    using Enums;
+    using Exceptions;
+
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Input;
-
-    using Enums;
-    using Classes.Menu;
-    using Exceptions;
 
     public partial class Engine
     {
@@ -39,6 +39,7 @@
             else if (currentGameState == GameStateType.Pause)
             {
                 IsMouseVisible = true;
+
                 MenuNavigation.Navigate(keyState, oldKeyState);
                 MenuNavigation.Update(ref currentGameState, resumeBtn, optionsBtn, exitBtn);
             }
@@ -49,7 +50,7 @@
                 {
                     // Platform Collision //
 
-                    thePlayer.InteractWithWorld(allPlatforms,allCollectables,keyState,new float[] {JumpPower,Gravity,MaxVelocity});
+                    thePlayer.InteractWithWorld(allPlatforms, allCollectables, keyState, new float[] { JumpPower, Gravity, MaxVelocity });
 
                     for (int j = 0; j < backgrounds.Length; j++)
                     {
@@ -59,7 +60,8 @@
                     allPlatforms.Scroll(-thePlayer.Velocity);
                     allCollectables.Scroll(-thePlayer.Velocity);
                     allEnemies.Scroll(-thePlayer.Velocity);
-                    if(allPlatforms.HasBurned == true)
+
+                    if (allPlatforms.HasBurned == true)
                     {
                         currentGameState = GameStateType.Defeat;
                         throw new EndGameException("Zaeka uide u lavata");
@@ -68,11 +70,11 @@
             }
             else if (currentGameState == GameStateType.Victory)
             {
-                ////TODO
+                //TODO:
             }
             else if (currentGameState == GameStateType.Defeat)
             {
-                ////TODO
+                //TODO:
             }
             else if (currentGameState == GameStateType.Quit)
             {
@@ -80,6 +82,7 @@
             }
 
             oldKeyState = keyState;
+
             base.Update(gameTime);
         }
     }

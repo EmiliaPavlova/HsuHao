@@ -34,6 +34,7 @@
                 TheTexture = null;
                 return this.ScoreValue;
             }
+
             return 0;
         }
     }

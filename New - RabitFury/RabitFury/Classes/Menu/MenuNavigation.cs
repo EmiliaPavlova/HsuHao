@@ -1,10 +1,9 @@
 ﻿namespace RabitFury.Classes.Menu
 {
-    using Microsoft.Xna.Framework.Input;
-
     using Constants;
-    using Extensions;
     using Enums;
+    using Extensions;
+    using Microsoft.Xna.Framework.Input;
 
     public static class MenuNavigation
     {
@@ -76,7 +75,7 @@
             }
             else if (buttonAction == ButtonActionType.Options)
             {
-                ////TODO
+                //TODO:
             }
             else if (buttonAction == ButtonActionType.Quit)
             {

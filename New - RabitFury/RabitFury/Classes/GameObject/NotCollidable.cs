@@ -1,6 +1,5 @@
 ﻿namespace RabitFury.Classes.GameObject
 {
-    using System;
 
     using global::RabitFury.Interfaces;
     using Microsoft.Xna.Framework;
@@ -8,7 +7,9 @@
 
     public abstract class NotCollidable : GameObject, IRenderable
     {
-        public NotCollidable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture) 
-            : base(setPos, setSize, setColor, setTexture) { }
+        public NotCollidable(Vector2 setPos, Vector2 setSize, Color setColor, Texture2D setTexture)
+            : base(setPos, setSize, setColor, setTexture)
+        {
+        }
     }
 }

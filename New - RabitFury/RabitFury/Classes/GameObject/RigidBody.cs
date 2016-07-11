@@ -1,12 +1,11 @@
 ﻿
 namespace RabitFury.Classes.GameObject
 {
-    using System;
     using Interfaces;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
 
-    public abstract class RigidBody : IMoveable , ICollidable,ICollided
+    public abstract class RigidBody : IMoveable, ICollidable, ICollided
     {
         public Vector2[] CollisionPoints { get; set; }
 
@@ -20,17 +19,17 @@ namespace RabitFury.Classes.GameObject
 
         public Vector2 Velocity { get; set; }
 
-        public RigidBody(Vector2 setPos,Vector2 setSize,Vector2 setVelicty,Color setColor,Texture2D setTexture)
+        public RigidBody(Vector2 setPos, Vector2 setSize, Vector2 setVelicty, Color setColor, Texture2D setTexture)
         {
-            Position = setPos;Size = setSize;Velocity = setVelicty;
-            TheColor = setColor;TheTexture = setTexture;
+            Position = setPos; Size = setSize; Velocity = setVelicty;
+            TheColor = setColor; TheTexture = setTexture;
         }
 
         public virtual void InteractWithWorld(AllPlatforms platforms)
         {
             if (platforms.IfCollide(CollisionPoints[0])) // Possibly more than 1 collision points//
             {
-                //TO DO
+                //TODO: 
             }
         }
 
@@ -40,6 +39,7 @@ namespace RabitFury.Classes.GameObject
             {
                 return true;
             }
+
             return false;
         }
     }

@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace RabitFury
+﻿namespace RabitFury
 {
+    using System;
 #if WINDOWS || LINUX
     public static class RabitFury
     {

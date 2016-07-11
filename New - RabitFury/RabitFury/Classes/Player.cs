@@ -5,10 +5,10 @@
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
-    public class Player : RigidBody , IAnimateable
+    public class Player : RigidBody, IAnimateable
     {
         public Vector2 EdgeShifts { get; set; }
-        
+
         public Rectangle ViewRect { get; set; }
 
         public SpriteEffects IsFlipped { get; set; }
@@ -31,16 +31,16 @@
         {
             get
             {
-                return new Rectangle(GetFrame*(int)DefaktoSize.X - 5, 0, (int)DefaktoSize.X, (int)DefaktoSize.Y);
+                return new Rectangle(GetFrame * (int)DefaktoSize.X - 5, 0, (int)DefaktoSize.X, (int)DefaktoSize.Y);
             }
         }
 
         public int ActionIndex { get; set; }
-        
-        
-        
+
+
+
         public Player(Vector2 setPos, Vector2 setSize, Vector2 setVelicty, Color setColor, Texture2D setTexture)
-            : base(setPos,setSize,setVelicty,setColor,setTexture)
+            : base(setPos, setSize, setVelicty, setColor, setTexture)
         {
             EdgeShifts = new Vector2(0.37f, 0.4f);
 
@@ -68,9 +68,9 @@
             //Animation stuff set bellow:
             CurrentFrame = 0f;
         }
-        
 
-        public void InteractWithWorld(AllPlatforms allPlatforms,AllCollectables allCollectables,KeyboardState keyState,float[] worldArgs)
+
+        public void InteractWithWorld(AllPlatforms allPlatforms, AllCollectables allCollectables, KeyboardState keyState, float[] worldArgs)
         {
             bool touchDown = false;
 
@@ -99,8 +99,6 @@
                 this.Velocity = new Vector2(this.Velocity.X, -worldArgs[0]); //worldArgs[0] is JumpPower//
             }
 
-
-
             if (allPlatforms.IfCollide(this.CollisionPoints[0]) ||
                         allPlatforms.IfCollide(this.CollisionPoints[1]))
             {
@@ -123,8 +121,9 @@
             {
                 if (this.Velocity.Y < 0) this.Velocity = new Vector2(this.Velocity.X, 0);
             }
+
             //Collide with collectables
-            allCollectables.Collide(CollisionPoints[0],this); allCollectables.Collide(CollisionPoints[1], this);
+            allCollectables.Collide(CollisionPoints[0], this); allCollectables.Collide(CollisionPoints[1], this);
             allCollectables.Collide(CollisionPoints[2], this); allCollectables.Collide(CollisionPoints[3], this);
             allCollectables.Collide(CollisionPoints[4], this); allCollectables.Collide(CollisionPoints[5], this);
             allCollectables.Collide(CollisionPoints[6], this); allCollectables.Collide(CollisionPoints[7], this);
@@ -144,7 +143,11 @@
         public void Animate()
         {
             CurrentFrame += 0.2f;
-            if (CurrentFrame >= 10f) { CurrentFrame = 0; }
+
+            if (CurrentFrame >= 10f)
+            {
+                CurrentFrame = 0;
+            }
         }
 
         public void Reset(bool touchDown)
@@ -153,7 +156,10 @@
             {
                 CurrentFrame = 0;
             }
-            else CurrentFrame = 2;
+            else
+            {
+                CurrentFrame = 2;
+            }
         }
     }
 }

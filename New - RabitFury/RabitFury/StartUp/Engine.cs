@@ -1,13 +1,13 @@
 ﻿namespace RabitFury.StartUp
 {
+    using Classes;
+    using Classes.Menu;
+    using Classes.Wrappers;
+    using Enums;
+
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
-
-    using Classes;
-    using Classes.Menu;
-    using Enums;
-    using Classes.Wrappers;
     public partial class Engine : Game
     {
         private const float JumpPower = 0.010f;
@@ -19,6 +19,7 @@
         private GameStateType currentGameState = GameStateType.InGame;
 
         private Vector2 bgSize = new Vector2(1, 0.5625f);
+
         private Vector2[] backgrounds = new Vector2[7]
         {
             new Vector2(0.445f, 0.28125f),
@@ -71,20 +72,20 @@
         {
             ////---Menu Items////
             resumeBtn = ButtonUtilities.GenerateButton(
-                Content, 
-                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight), 
+                Content,
+                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.28f * graphics.PreferredBackBufferHeight),
                 ButtonActionType.Resume);
 
             optionsBtn = ButtonUtilities.GenerateButton(
-                Content, 
-                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight), 
+                Content,
+                new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.43f * graphics.PreferredBackBufferHeight),
                 ButtonActionType.Options);
 
             exitBtn = ButtonUtilities.GenerateButton(
-                Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight), 
+                Content, new Vector2(0.454f * graphics.PreferredBackBufferWidth, 0.58f * graphics.PreferredBackBufferHeight),
                 ButtonActionType.Quit);
             ////Menu Items---////
-            
+
             base.Initialize();
         }
 
@@ -106,6 +107,7 @@
             brickTexture = Content.Load<Texture2D>("Textures/Brick");
 
             terrain = new Texture2D[19];
+
             for (int i = 0; i < terrain.Length; i++)
             {
                 terrain[i] = Content.Load<Texture2D>($"Textures/{i + 1}");
@@ -124,10 +126,12 @@
             allEnemies = new AllEnemies(enemyTextures);
 
             // Player set with size { X,Y} // aspect ratio is 3:5 //
-            thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0),Color.White,defaultTexture);
-            thePlayer.DefaktoSize = new Vector2(200,172);
+            thePlayer = new Player(new Vector2(0.5f, 0.4f), new Vector2(0.045f, 0.075f), new Vector2(0, 0), Color.White, defaultTexture);
+            thePlayer.DefaktoSize = new Vector2(200, 172);
         }
 
-        protected override void UnloadContent() { }
+        protected override void UnloadContent()
+        {
+        }
     }
 }

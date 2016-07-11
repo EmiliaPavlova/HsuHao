@@ -6,7 +6,7 @@
     public class Enemy : RigidBody
     {
         public Enemy(Vector2 setPos, Vector2 setSize, Vector2 setVelicty, Color setColor, Texture2D setTexture)
-            : base(setPos,setSize,setVelicty,setColor,setTexture)
+            : base(setPos, setSize, setVelicty, setColor, setTexture)
         {
             this.CollisionPoints = new Vector2[2];
             // TODO: set two points
@@ -32,6 +32,7 @@
             {
                 return true;
             }
+
             return false;
         }
     }
