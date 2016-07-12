@@ -154,7 +154,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Spritesheets\JustNinja.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Spritesheets\RealBunnies.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

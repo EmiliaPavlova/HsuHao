@@ -15,7 +15,12 @@ namespace RabitFury.Classes.Wrappers
         public AllEnemies(Texture2D[] allTextures)
         {
             listEnemies = new List<Enemy>();
-            listEnemies.Add(new Enemy(new Vector2(1.9f, 0.1f), new Vector2(0.02f, 0.02f), new Vector2(0, 0), Color.White, allTextures[0]));
+            listEnemies.Add(new Enemy(new Vector2(1.1f, 0.01f), new Vector2(0.05f, 0.05f), new Vector2(0, 0), Color.White, allTextures[0]));
+            listEnemies.Add(new Enemy(new Vector2(1.362f, 0.34f), new Vector2(0.03f, 0.03f), new Vector2(0, 0), Color.White, allTextures[0]));
+
+            listEnemies.Add(new Enemy(new Vector2(0.94f, 0.4f), new Vector2(0.08f, 0.08f), new Vector2(0, 0), Color.White, allTextures[0]));
+            listEnemies.Add(new Enemy(new Vector2(2.31f, 0.21f), new Vector2(0.05f, 0.05f), new Vector2(0, 0), Color.White, allTextures[0]));
+
         }
 
         public void Scroll(Vector2 ammount)
